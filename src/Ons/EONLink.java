@@ -13,6 +13,9 @@ public class EONLink extends Link {
     protected int numSlots;
     protected long slots[];
     protected static int guardband;
+    protected double alpha = 10;
+    protected double ls;
+
 
     public EONLink(int id, int src, int dst, double delay, double weight, int numSlots, int guardband) {
         super(id, src, dst, delay, weight);
@@ -527,9 +530,35 @@ public class EONLink extends Link {
         return contPossibles;
     }
 
-    public double asinh(double a){
-        return Math.log(a + Math.sqrt(1 + a * a));
+    public int getChannelNum(){
+        int channelNum = 0;
+        for (int i = 0; i < numSlots; i++) {
+            if (slots[i] == 1){
+                if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
+                    channelNum++;
+                }
+            }
+        }
+        return channelNum;
     }
 
-    
+    public int getBW(){
+        int chNum = getChannelNum();
+        int bandLength[] = new int[slots.length];
+        for (int i = 0; i < numSlots; i++) {
+            if (slots[i] == 1){
+                if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
+                    bandLength[chNum] = 0;
+                    chNum++;
+                }
+                bandLength[chNum - 1]++;
+            }
+        }
+    }
+
+    public double SNR(){
+        double leff = (1d - Math.exp(-2.0*alpha*ls))/(2*alpha);
+    }
+
+
 }
