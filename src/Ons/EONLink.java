@@ -1,6 +1,9 @@
 package Ons;
 
+import Ons.Util.MathFunctions;
+
 import java.util.TreeSet;
+import java.util.function.DoubleToIntFunction;
 
 /**
  * The Elastic Optical Network (EON) Ons.Link represents a Fiberlink in an optical
@@ -14,9 +17,11 @@ public class EONLink extends Link {
     protected long slots[];
     protected static int guardband;
     protected double alpha = 10;
-    protected double ls;
+    protected double ls = 80000.0;
     protected double slotSize = 12500000000.0;
     protected double beta2 = 21.7 * Math.pow(10,-27);
+    protected double gamma = 1.3 * Math.pow(10,-3);
+    protected double nsp = 1.8;
 
     public EONLink(int id, int src, int dst, double delay, double weight, int numSlots, int guardband) {
         super(id, src, dst, delay, weight);
@@ -558,13 +563,55 @@ public class EONLink extends Link {
 
     /**
      * Retrieves the SNR of channels
+     * Based on: A Detailed Analytical Derivation of the GN Model of Non-Linear Interference in Coherent
+     *           Optical Transmission Systems (pages 18 & 19 for nonlinear part of noise)
+     * Authors: Pierluigi Poggiolini, Gabriella Bosco, Andrea Carena, Vittorio Curri, Yanchao Jiang and
+     *          Fabrizio Forghieri
      *
      * @return the SNR of each channel
      */
     public double[] SNR(){
-        double pi = 3.14159265359;
-        double leff = (1d - Math.exp(-2d*alpha*ls))/(2d*alpha);
-        double den = (2d * pi * beta2)/(2d * alpha);
+        double[][] BW = getBW();     // bandwidth and center frequencies
+        int channelNum = (int)BW[numSlots][0];     // number of channels
+        double pi = 3.14159265359;     // pi!
+        double h = 6.62607004 * Math.pow(10,-34);     // Plank constant
+        double e = 2.71828182845;     // Euler's number
+        double L = getWeight();     // fiber length
+        double Ns = Math.floor(L / ls) + 1d;     // number of spans
+        double leff = (1d - Math.exp(-2d*alpha*ls))/(2d*alpha);     // effective length
+        double power = 0d;     // power of channels (dB)
+        double[][] psi = new double[channelNum][channelNum];     // psi in nonlinear part of noise
+        double den = (2d * pi * beta2)/(2d * alpha);     // denominator of psi
+        double num1,num2;     // two parts of nominator of psi for j!=k
+        double[] G = new double[channelNum];     // PSD of channels
+        double[] Gnli = new double[channelNum];     // PSD of nonlinear part of noise
+        double[] GASE = new double[channelNum];     // PSD of ASE noise
+        double[] SNR = new double[channelNum];
+
+        for(int i = 0; i < channelNum; i++){
+            G[i] = Math.pow(10, (power - 30d)/10d);
+            Gnli[i] = 0d;
+            GASE[i] = Math.pow(e,alpha*L) * nsp * h * BW[i][1];
+        }
+
+        for (int j = 0; j < channelNum; j++) {
+            for(int k = 0; k < channelNum; k++){
+                if(j == k){
+                    psi[j][j] = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha,-1) * (beta2 / 2d) * Math.pow(BW[j][0],2))/den;
+                    Gnli[k] = Gnli[k] + (16d/27d) *Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k] * 2d;
+                }
+                else{
+                    num1 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha,-1) * beta2 * (BW[j][1] - BW[k][1] + BW[j][0]/2d) * BW[k][0]);
+                    num2 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha,-1) * beta2 * (BW[j][1] - BW[k][1] - BW[j][0]/2d) * BW[k][0]);
+                    psi[j][k] = (num1 + num2) / (2 * den);
+                    Gnli[k] = Gnli[k] + (16d/27d) *Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k] * 2d;
+                }
+            }
+        }
+        for(int i = 0; i < channelNum; i++){
+            SNR[i] = G[i] / (Gnli[i] + GASE[i]);
+        }
+        return SNR;
     }
 
 
