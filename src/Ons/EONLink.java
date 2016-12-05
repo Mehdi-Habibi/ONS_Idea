@@ -15,7 +15,8 @@ public class EONLink extends Link {
     protected static int guardband;
     protected double alpha = 10;
     protected double ls;
-
+    protected double slotSize = 12500000000.0;
+    protected double beta2 = 21.7 * Math.pow(10,-27);
 
     public EONLink(int id, int src, int dst, double delay, double weight, int numSlots, int guardband) {
         super(id, src, dst, delay, weight);
@@ -530,34 +531,40 @@ public class EONLink extends Link {
         return contPossibles;
     }
 
-    public int getChannelNum(){
-        int channelNum = 0;
+    /**
+     * Retrieves the bandwidth of channels
+     *
+     * @return the bandwidth (Hz), center frequency (Hz) of each channel and number of channels in the link
+     */
+    public double[][] getBW(){
+        int chNum = -1;
+        double bandLength[][] = new double[numSlots][2];
         for (int i = 0; i < numSlots; i++) {
             if (slots[i] == 1){
                 if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
-                    channelNum++;
-                }
-            }
-        }
-        return channelNum;
-    }
-
-    public int getBW(){
-        int chNum = getChannelNum();
-        int bandLength[] = new int[slots.length];
-        for (int i = 0; i < numSlots; i++) {
-            if (slots[i] == 1){
-                if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
-                    bandLength[chNum] = 0;
                     chNum++;
+                    bandLength[chNum][0] = 0.0;
+                    bandLength[chNum][1] = 0.0;
+
                 }
-                bandLength[chNum - 1]++;
+                bandLength[chNum][0] = bandLength[chNum][0] + slotSize;
+                bandLength[chNum][1] = bandLength[chNum][1] + (slotSize/2.0);
+
             }
         }
+        bandLength[numSlots][0] = (double)chNum;
+        return bandLength;
     }
 
-    public double SNR(){
-        double leff = (1d - Math.exp(-2.0*alpha*ls))/(2*alpha);
+    /**
+     * Retrieves the SNR of channels
+     *
+     * @return the SNR of each channel
+     */
+    public double[] SNR(){
+        double pi = 3.14159265359;
+        double leff = (1d - Math.exp(-2d*alpha*ls))/(2d*alpha);
+        double den = (2d * pi * beta2)/(2d * alpha);
     }
 
 
