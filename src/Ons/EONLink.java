@@ -13,7 +13,7 @@ import java.util.function.DoubleToIntFunction;
  */
 public class EONLink extends Link {
 
-    protected int numSlots;
+    public static int numSlots;
     protected long slots[];
     protected static int guardband;
     protected double alpha = 2.2/8.6;
@@ -549,7 +549,7 @@ public class EONLink extends Link {
                 if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
                     chNum++;
                     bandLength[chNum][0] = 0.0;
-                    bandLength[chNum][1] = 0.0;
+                    bandLength[chNum][1] = 192d * Math.pow(10,12)+ 12.5 * Math.pow(10,9) * (double)i;
 
                 }
                 bandLength[chNum][0] = bandLength[chNum][0] + slotSize;
@@ -570,7 +570,7 @@ public class EONLink extends Link {
      *
      * @return the SNR of each channel
      */
-    public double[] SNR(){
+    public double[] getSNR(){
         double[][] BW = getBW();     // bandwidth and center frequencies
         int channelNum = (int)BW[numSlots][0];     // number of channels
         double pi = 3.14159265359;     // pi!
