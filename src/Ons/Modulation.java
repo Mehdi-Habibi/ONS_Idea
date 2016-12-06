@@ -59,6 +59,39 @@ public final class Modulation {
      * Represents the reach of the 256QAM in kilometers.
      */
     public static final int _256QAMReach = 62;
+
+    /**
+     * Represents the threshold SNR of the BPSK.
+     */
+    public static final int _BPSKSNR = 6;
+    /**
+     * Represents the threshold SNR of the QPSK.
+     */
+    public static final int _QPSKSNR = 12;
+    /**
+     * Represents the threshold SNR of the 8QAM.
+     */
+    public static final int _8QAMSNR = 18;
+    /**
+     * Represents the threshold SNR of the 16QAM.
+     */
+    public static final int _16QAMSNR = 24;
+    /**
+     * Represents the threshold SNR of the 32QAM.
+     */
+    public static final int _32QAMSNR = 30;
+    /**
+     * Represents the threshold SNRof the 64QAM.
+     */
+    public static final int _64QAMSNR = 36;
+    /**
+     * Represents the threshold SNR of the 128QAM.
+     */
+    public static final int _128QAMSNR = 42;
+    /**
+     * Represents the threshold SNR of the 256QAM.
+     */
+    public static final int _256QAMSNR = 48;
     
     /**
      * Retrieves the number of slots needed this rate in this conditions.
@@ -202,6 +235,75 @@ public final class Modulation {
                                     return _8QAM;
                                 } else {
                                     if (distance <= _QPSKReach) {
+                                        return _QPSK;
+                                    } else {
+                                        return _BPSK;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Retrieves the threshold SNR of modulation.
+     * @param idModulation the modulation id
+     * @return the threshold SNR of modulation
+     */
+    public static int getSNR(int idModulation){
+        switch (idModulation){
+            case 0:
+                return _BPSKSNR;
+            case 1:
+                return _QPSKSNR;
+            case 2:
+                return _8QAMSNR;
+            case 3:
+                return _16QAMSNR;
+            case 4:
+                return _32QAMSNR;
+            case 5:
+                return _64QAMSNR;
+            case 6:
+                return _128QAMSNR;
+            case 7:
+                return _256QAMSNR;
+        }
+        return -1;
+    }
+
+    /**
+     * Retrieves the best modulation format given the SNR
+     * @param SNR the SNR
+     * @return the best modulation format for this SNR
+     */
+    public static int getBestModulationSNR(double SNR){
+        if (SNR > _BPSKReach) {
+            return -1;
+        } else {
+            if (SNR <= _256QAMSNR) {
+                return _256QAM;
+            } else {
+                if (SNR <= _128QAMSNR) {
+                    return _128QAM;
+                } else {
+                    if (SNR <= _64QAMSNR) {
+                        return _64QAM;
+                    } else {
+                        if (SNR <= _32QAMSNR) {
+                            return _32QAM;
+                        } else {
+                            if (SNR <= _16QAMSNR) {
+                                return _16QAM;
+                            } else {
+                                if (SNR <= _8QAMSNR) {
+                                    return _8QAM;
+                                } else {
+                                    if (SNR <= _QPSKSNR) {
                                         return _QPSK;
                                     } else {
                                         return _BPSK;

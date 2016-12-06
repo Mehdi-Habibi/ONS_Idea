@@ -16,9 +16,9 @@ public class EONLink extends Link {
     protected int numSlots;
     protected long slots[];
     protected static int guardband;
-    protected double alpha = 10;
-    protected double ls = 80000.0;
-    protected double slotSize = 12500000000.0;
+    protected double alpha = 2.2/8.6;
+    protected double ls = 80000d;
+    protected double slotSize = 12500000000d;
     protected double beta2 = 21.7 * Math.pow(10,-27);
     protected double gamma = 1.3 * Math.pow(10,-3);
     protected double nsp = 1.8;
