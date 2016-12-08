@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/EONLink.java" afterPath="$PROJECT_DIR$/src/Ons/EONLink.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/Modulation.java" afterPath="$PROJECT_DIR$/src/Ons/Modulation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,78 +24,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EONLink.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
+      <file leaf-file-name="Modulation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Ons/Modulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="376">
+              <caret line="260" column="7" lean-forward="true" selection-start-line="260" selection-start-column="7" selection-end-line="260" selection-end-column="7" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getUsedSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#reserveSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="method#reserveSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#releaseSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="method#releaseSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-                <element signature="method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#toString#0;class#EONLink#0" expanded="false" />
-                <element signature="method#toString#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#printLink#0;class#EONLink#0" expanded="false" />
-                <element signature="method#printLink#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#findLightpath#0;class#EONLink#0" expanded="false" />
-                <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
-                <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
+                <element signature="docComment;field#_64QAMSNR#0;class#Modulation#0" expanded="false" />
+                <element signature="docComment;method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
+                <element signature="method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
+                <element signature="docComment;method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
+                <element signature="method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
+                <element signature="docComment;method#getModulationName#0;class#Modulation#0" expanded="false" />
+                <element signature="method#getModulationName#0;class#Modulation#0" expanded="false" />
+                <element signature="docComment;method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
+                <element signature="method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
+                <element signature="docComment;method#getModulationReach#0;class#Modulation#0" expanded="false" />
+                <element signature="method#getModulationReach#0;class#Modulation#0" expanded="false" />
+                <element signature="docComment;method#getBestModulation#0;class#Modulation#0" expanded="false" />
+                <element signature="method#getBestModulation#0;class#Modulation#0" expanded="false" />
+                <element signature="docComment;method#getSNR#0;class#Modulation#0" expanded="false" />
+                <element signature="method#getSNR#0;class#Modulation#0" expanded="false" />
+                <element signature="docComment;method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
+                <element signature="method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Modulation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/Modulation.java">
+      <file leaf-file-name="EONLink.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3993">
-              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KSP.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSP.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="91" column="103" lean-forward="false" selection-start-line="91" selection-start-column="103" selection-end-line="91" selection-end-column="103" />
+            <state relative-caret-position="119">
+              <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,9 +131,10 @@
         <option value="$PROJECT_DIR$/src/Ons/MyStatistics.java" />
         <option value="$PROJECT_DIR$/src/Ons/MathFunctions.java" />
         <option value="$PROJECT_DIR$/src/Ons/Util/MathFunctions.java" />
+        <option value="$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java" />
+        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
         <option value="$PROJECT_DIR$/src/Ons/Modulation.java" />
         <option value="$PROJECT_DIR$/src/Ons/EONLink.java" />
-        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
       </list>
     </option>
   </component>
@@ -312,7 +275,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -367,8 +329,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -791,7 +754,9 @@
       <workItem from="1480611858816" duration="10058000" />
       <workItem from="1480853539948" duration="235000" />
       <workItem from="1480963534965" duration="13862000" />
-      <workItem from="1481023070879" duration="3880000" />
+      <workItem from="1481023070879" duration="4147000" />
+      <workItem from="1481029401173" duration="2064000" />
+      <workItem from="1481185405993" duration="3011000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1480853762837</created>
@@ -821,11 +786,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481023901538</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="KSPwithSNR is finished and need to revise">
+      <created>1481026981132</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1481026981132</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28035000" />
+    <option name="totallyTimeSpent" value="33377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -873,11 +845,12 @@
     <MESSAGE value="starting SNR" />
     <MESSAGE value="SNR is finished and need to revise" />
     <MESSAGE value="Modulation is finished and need to revise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modulation is finished and need to revise" />
+    <MESSAGE value="KSPwithSNR is finished and need to revise" />
+    <option name="LAST_COMMIT_MESSAGE" value="KSPwithSNR is finished and need to revise" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -886,14 +859,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Ons/Util/MathFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Link.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
@@ -908,41 +873,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getUsedSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#reserveSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#reserveSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#releaseSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#releaseSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-            <element signature="method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#EONLink#0" expanded="false" />
-            <element signature="method#toString#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#printLink#0;class#EONLink#0" expanded="false" />
-            <element signature="method#printLink#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#findLightpath#0;class#EONLink#0" expanded="false" />
-            <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -969,41 +899,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getUsedSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#reserveSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#reserveSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#releaseSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#releaseSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-            <element signature="method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#EONLink#0" expanded="false" />
-            <element signature="method#toString#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#printLink#0;class#EONLink#0" expanded="false" />
-            <element signature="method#printLink#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#findLightpath#0;class#EONLink#0" expanded="false" />
-            <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1270,24 +1165,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Simulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="189" column="13" lean-forward="true" selection-start-line="189" selection-start-column="13" selection-end-line="189" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3281">
-          <caret line="202" column="13" lean-forward="true" selection-start-line="202" selection-start-column="13" selection-end-line="202" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1315,14 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/RA/RA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1331,65 +1204,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getUsedSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#reserveSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#reserveSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#releaseSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#releaseSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-            <element signature="method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#EONLink#0" expanded="false" />
-            <element signature="method#toString#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#printLink#0;class#EONLink#0" expanded="false" />
-            <element signature="method#printLink#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#findLightpath#0;class#EONLink#0" expanded="false" />
-            <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Modulation.java">
+    <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3993">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="1173">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="210" column="20" lean-forward="false" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="91" column="103" lean-forward="false" selection-start-line="91" selection-start-column="103" selection-end-line="91" selection-end-column="103" />
+        <state relative-caret-position="306">
+          <caret line="84" column="79" lean-forward="false" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Modulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="260" column="7" lean-forward="true" selection-start-line="260" selection-start-column="7" selection-end-line="260" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;field#_64QAMSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getModulationName#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getModulationName#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getModulationReach#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getModulationReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getBestModulation#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getBestModulation#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
           </folding>
         </state>
       </provider>

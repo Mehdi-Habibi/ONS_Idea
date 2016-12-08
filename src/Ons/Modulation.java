@@ -60,6 +60,9 @@ public final class Modulation {
      */
     public static final int _256QAMReach = 62;
 
+
+
+
     /**
      * Represents the threshold SNR of the BPSK.
      */
@@ -92,7 +95,9 @@ public final class Modulation {
      * Represents the threshold SNR of the 256QAM.
      */
     public static final int _256QAMSNR = 48;
-    
+
+
+
     /**
      * Retrieves the number of slots needed this rate in this conditions.
      * @param rate the rate flow in Mbps
@@ -282,28 +287,28 @@ public final class Modulation {
      * @return the best modulation format for this SNR
      */
     public static int getBestModulationSNR(double SNR){
-        if (SNR > _BPSKReach) {
+        if (_BPSKSNR > SNR) {
             return -1;
         } else {
-            if (SNR <= _256QAMSNR) {
+            if (_256QAMSNR <= SNR) {
                 return _256QAM;
             } else {
-                if (SNR <= _128QAMSNR) {
+                if (_128QAMSNR <= SNR) {
                     return _128QAM;
                 } else {
-                    if (SNR <= _64QAMSNR) {
+                    if (_64QAMSNR <= SNR) {
                         return _64QAM;
                     } else {
-                        if (SNR <= _32QAMSNR) {
+                        if (_32QAMSNR <= SNR) {
                             return _32QAM;
                         } else {
-                            if (SNR <= _16QAMSNR) {
+                            if (_16QAMSNR <= SNR) {
                                 return _16QAM;
                             } else {
-                                if (SNR <= _8QAMSNR) {
+                                if (_8QAMSNR <= SNR) {
                                     return _8QAM;
                                 } else {
-                                    if (SNR <= _QPSKSNR) {
+                                    if (_QPSKSNR <= SNR) {
                                         return _QPSK;
                                     } else {
                                         return _BPSK;

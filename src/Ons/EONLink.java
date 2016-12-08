@@ -13,15 +13,16 @@ import java.util.function.DoubleToIntFunction;
  */
 public class EONLink extends Link {
 
-    public static int numSlots;
+    protected static int numSlots;
     protected long slots[];
     protected static int guardband;
-    protected double alpha = 2.2/8.6;
+    protected double alpha = 2.2/8.6;     // Np/m = 0.22 d/km
     protected double ls = 80000d;
-    protected double slotSize = 12500000000d;
+    protected double slotSize = 12.5 * Math.pow(10,9);
     protected double beta2 = 21.7 * Math.pow(10,-27);
     protected double gamma = 1.3 * Math.pow(10,-3);
     protected double nsp = 1.8;
+    public static int numberofSlots = numSlots;
 
     public EONLink(int id, int src, int dst, double delay, double weight, int numSlots, int guardband) {
         super(id, src, dst, delay, weight);

@@ -82,7 +82,7 @@ public class KSPwithSNR implements RA {
                         double SNR = 0;
                         for(k = 0; k < links.length; k++){
                             double[][] bandwidth = ((EONLink) cp.getPT().getLink(links[k])).getBW();
-                            for (int a = 0; a < bandwidth[EONLink.numSlots][0]; a++){
+                            for (int a = 0; a < bandwidth[EONLink.numberofSlots][0]; a++){
                                 if(bandwidth[a][1] == centerFrequency){
                                     index[k] = a;
                                 }
