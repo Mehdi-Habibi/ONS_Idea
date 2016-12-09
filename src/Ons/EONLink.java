@@ -14,10 +14,10 @@ import java.util.function.DoubleToIntFunction;
 public class EONLink extends Link {
 
     protected static int numSlots;
+    public static int numberofSlots;
     protected long slots[];
     protected static int guardband;
     protected double alpha = (0.22 * 1000d)/8.685889638;     // Np/m (= 0.22 d/km), 1 Np = 8.685889638 dB
-    protected double alpha1 = 2d * (0.22 * 1000d)/8.685889638;
     protected double ls = 80000d;
     protected double slotSize = 12.5 * Math.pow(10,9);
     protected double beta2 = 21.7 * Math.pow(10,-27);
@@ -581,10 +581,10 @@ public class EONLink extends Link {
         double e = 2.71828182845;     // Euler's number
         double L = getWeight() * 1000d;     // fiber length
         double Ns = Math.ceil(L / ls);     // number of spans
-        double leff = (1d - Math.exp(-2d*alpha1*ls))/(2d*alpha1);     // effective length
+        double leff = (1d - Math.exp(-2d*alpha*ls))/(2d*alpha);     // effective length
         double power = 0d;     // power of channels (dB)
         double[][] psi = new double[channelNum][channelNum];     // psi in nonlinear part of noise
-        double den = (2d * pi * beta2)/(2d * alpha1);     // denominator of psi
+        double den = (2d * pi * beta2)/(2d * alpha);     // denominator of psi
         double num1,num2;     // two parts of nominator of psi for j!=k
         double[] G = new double[channelNum];     // PSD of channels
         double[] Gnli = new double[channelNum];     // PSD of nonlinear part of noise
@@ -600,12 +600,12 @@ public class EONLink extends Link {
         for (int k = 0; k < channelNum; k++) {
             for(int j = 0; j < channelNum; j++){
                 if(j == k){
-                    psi[j][j] = Ns * MathFunctions.asinh((Math.pow(pi,2) / 2d) * Math.pow(2 * alpha1,-1) * beta2 * Math.pow(BW[j][0],2))/den;
+                    psi[j][j] = Ns * MathFunctions.asinh((Math.pow(pi,2) / 2d) * Math.pow(2 * alpha,-1) * beta2 * Math.pow(BW[j][0],2))/den;
                     Gnli[k] = Gnli[k] + 2d * Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k];
                 }
                 else{
-                    num1 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha1,-1) * beta2 * (BW[j][1] - BW[k][1] + BW[j][0]/2d) * BW[k][0]);
-                    num2 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha1,-1) * beta2 * (BW[j][1] - BW[k][1] - BW[j][0]/2d) * BW[k][0]);
+                    num1 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha,-1) * beta2 * (BW[j][1] - BW[k][1] + BW[j][0]/2d) * BW[k][0]);
+                    num2 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha,-1) * beta2 * (BW[j][1] - BW[k][1] - BW[j][0]/2d) * BW[k][0]);
                     psi[j][k] = Ns * (num1 - num2) / (2d * den);
                     Gnli[k] = Gnli[k] + 2d * Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k] * 2d;
                 }

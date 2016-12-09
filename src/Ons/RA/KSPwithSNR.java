@@ -87,7 +87,8 @@ public class KSPwithSNR implements RA {
                                     index[k] = a;
                                 }
                             }
-                            SNR = SNR + ((EONLink) cp.getPT().getLink(links[k])).getSNR()[index[k]];
+                            double temp = ((EONLink) cp.getPT().getLink(links[k])).getSNR()[index[k]];
+                            SNR = (SNR * temp) / (SNR + temp);
                         }
                         if (cp.acceptFlow(flow.getID(), lps) && SNR >= Modulation.getSNR(modulation)) {
                             return;

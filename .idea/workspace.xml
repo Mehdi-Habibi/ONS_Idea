@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="Modulation class is revised">
+    <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/EONLink.java" afterPath="$PROJECT_DIR$/src/Ons/EONLink.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,29 +22,12 @@
     <favorites_list name="ONS_Idea" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Link.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/Link.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding>
-                <element signature="docComment;method#getID#0;class#Link#0" expanded="false" />
-                <element signature="docComment;method#getSource#0;class#Link#0" expanded="false" />
-                <element signature="docComment;method#getDestination#0;class#Link#0" expanded="false" />
-                <element signature="docComment;method#getWeight#0;class#Link#0" expanded="false" />
-                <element signature="docComment;method#getDelay#0;class#Link#0" expanded="false" />
-                <element signature="docComment;method#toString#0;class#Link#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="EONLink.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="616" column="19" lean-forward="true" selection-start-line="616" selection-start-column="19" selection-end-line="616" selection-end-column="19" />
+            <state relative-caret-position="17">
+              <caret line="581" column="13" lean-forward="true" selection-start-line="581" selection-start-column="13" selection-end-line="581" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
@@ -80,6 +64,7 @@
                 <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
                 <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
                 <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
+                <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
                 <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
               </folding>
             </state>
@@ -154,8 +139,8 @@
         <option value="$PROJECT_DIR$/src/Ons/MathFunctions.java" />
         <option value="$PROJECT_DIR$/src/Ons/Util/MathFunctions.java" />
         <option value="$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java" />
-        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
         <option value="$PROJECT_DIR$/src/Ons/Modulation.java" />
+        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
         <option value="$PROJECT_DIR$/src/Ons/EONLink.java" />
       </list>
     </option>
@@ -297,6 +282,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -351,9 +337,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -778,7 +763,8 @@
       <workItem from="1480963534965" duration="13862000" />
       <workItem from="1481023070879" duration="4147000" />
       <workItem from="1481029401173" duration="2064000" />
-      <workItem from="1481185405993" duration="20121000" />
+      <workItem from="1481185405993" duration="20605000" />
+      <workItem from="1481274444091" duration="613000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1480853762837</created>
@@ -822,11 +808,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481205538514</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="EONLink is revised except alpha1 and the coefficient.">
+      <created>1481246676913</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1481246676913</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50487000" />
+    <option name="totallyTimeSpent" value="51584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -894,11 +887,12 @@
     <MESSAGE value="Modulation is finished and need to revise" />
     <MESSAGE value="KSPwithSNR is finished and need to revise" />
     <MESSAGE value="Modulation class is revised" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modulation class is revised" />
+    <MESSAGE value="EONLink is revised except alpha1 and the coefficient." />
+    <option name="LAST_COMMIT_MESSAGE" value="EONLink is revised except alpha1 and the coefficient." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -911,7 +905,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
           <caret line="90" column="13" lean-forward="false" selection-start-line="90" selection-start-column="3" selection-end-line="90" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#getID#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getSource#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getDestination#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getWeight#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getDelay#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Link#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -955,6 +956,7 @@
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
+            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
@@ -972,7 +974,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="90" column="13" lean-forward="true" selection-start-line="90" selection-start-column="3" selection-end-line="90" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#getID#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getSource#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getDestination#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getWeight#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getDelay#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Link#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,6 +1025,7 @@
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
+            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
@@ -1276,13 +1286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/ControlPlane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Simulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -1330,29 +1333,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java" />
     <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
           <caret line="210" column="20" lean-forward="false" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="84" column="79" lean-forward="false" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1397,10 +1383,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/ControlPlane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1451">
+          <caret line="315" column="0" lean-forward="false" selection-start-line="315" selection-start-column="0" selection-end-line="315" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#newEvent#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#newEvent#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#blockFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#blockFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#rerouteFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#rerouteFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#newFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#removeFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#removeFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#removeFlowFromPT#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#removeFlowFromPT#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#canAddFlowToPT#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#canAddFlowToPT#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#addFlowToPT#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#addFlowToPT#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#checkLightpathContinuity#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#checkLightpathContinuity#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#getPath#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#getMappedFlows#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#getFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#getLightpathFlowCount#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#getLightpathFlowCount#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#getPT#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#getVT#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#createCandidateWDMLightPath#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#createCandidateWDMLightPath#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#createCandidateEONLightPath#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#createCandidateEONLightPath#0;class#ControlPlane#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="90" column="55" lean-forward="false" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="616" column="19" lean-forward="true" selection-start-line="616" selection-start-column="19" selection-end-line="616" selection-end-column="19" />
+        <state relative-caret-position="17">
+          <caret line="581" column="13" lean-forward="true" selection-start-line="581" selection-start-column="13" selection-end-line="581" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
@@ -1437,6 +1470,7 @@
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
+            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
