@@ -542,19 +542,23 @@ public class EONLink extends Link {
      * Retrieves the bandwidth of channels
      *
      * @return the bandwidth (Hz), center frequency (Hz) of each channel and number of channels in the link
+     * bandLength[][0] is for bandwidths, bandLength[][1] is for center frequencies, bandLength[][2] is for
+     * first slot index
      */
     public double[][] getBW(){
         int chNum = -1;
-        double bandLength[][] = new double[numSlots][2];     // bandLength[][0] is for bandwidths and bandLength[][1] is for center frequencies
+        double bandLength[][] = new double[numSlots][3];     //
         for (int a = 0; a < numSlots; a++) {
                 bandLength[a][0] = 0d;
                 bandLength[a][1] = 0d;
+                bandLength[a][2] = 0d;
         }
         for (int i = 0; i < numSlots; i++) {
             if (slots[i] != 0 && slots[i] != -1){
                 if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
                     chNum++;
                     bandLength[chNum][1] = 192d * Math.pow(10,12)+ slotSize * Math.pow(10,9) * ((double)i - 1d);
+                    bandLength[chNum][2] = (double)i;
                 }
                 bandLength[chNum][0] = bandLength[chNum][0] + slotSize;
                 bandLength[chNum][1] = bandLength[chNum][1] + (slotSize/2d);
