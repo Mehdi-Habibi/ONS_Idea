@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EONLink.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EONLink.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="366">
               <caret line="547" column="29" lean-forward="false" selection-start-line="547" selection-start-column="29" selection-end-line="547" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -63,6 +63,7 @@
                 <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
                 <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
                 <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
+                <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
                 <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
                 <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
                 <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
@@ -71,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="82" column="109" lean-forward="false" selection-start-line="82" selection-start-column="109" selection-end-line="82" selection-end-column="109" />
+            <state relative-caret-position="255">
+              <caret line="84" column="42" lean-forward="false" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -150,8 +151,8 @@
         <option value="$PROJECT_DIR$/src/Ons/Util/MathFunctions.java" />
         <option value="$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java" />
         <option value="$PROJECT_DIR$/src/Ons/Modulation.java" />
-        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
         <option value="$PROJECT_DIR$/src/Ons/EONLink.java" />
+        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
       </list>
     </option>
   </component>
@@ -320,28 +321,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Ons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ONS_Idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ONS_Idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RA" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -774,7 +753,7 @@
       <workItem from="1481023070879" duration="4147000" />
       <workItem from="1481029401173" duration="2064000" />
       <workItem from="1481185405993" duration="20605000" />
-      <workItem from="1481274444091" duration="2795000" />
+      <workItem from="1481274444091" duration="3316000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1480853762837</created>
@@ -832,11 +811,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481275097005</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="First slot of channels is added to getBW">
+      <created>1481285242890</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1481285242890</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53766000" />
+    <option name="totallyTimeSpent" value="54287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -906,7 +892,8 @@
     <MESSAGE value="Modulation class is revised" />
     <MESSAGE value="EONLink is revised except alpha1 and the coefficient." />
     <MESSAGE value="alpha1 and the coefficient are revised." />
-    <option name="LAST_COMMIT_MESSAGE" value="alpha1 and the coefficient are revised." />
+    <MESSAGE value="First slot of channels is added to getBW" />
+    <option name="LAST_COMMIT_MESSAGE" value="First slot of channels is added to getBW" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -973,6 +960,7 @@
             <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
+            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
             <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
@@ -1042,6 +1030,7 @@
             <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
+            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
             <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
@@ -1440,17 +1429,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="82" column="109" lean-forward="false" selection-start-line="82" selection-start-column="109" selection-end-line="82" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="366">
           <caret line="547" column="29" lean-forward="false" selection-start-line="547" selection-start-column="29" selection-end-line="547" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1487,10 +1468,19 @@
             <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
+            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
             <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="84" column="42" lean-forward="false" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

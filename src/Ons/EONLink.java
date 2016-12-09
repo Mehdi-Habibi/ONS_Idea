@@ -547,7 +547,7 @@ public class EONLink extends Link {
      */
     public double[][] getBW(){
         int chNum = -1;
-        double bandLength[][] = new double[numSlots][3];     //
+        double bandLength[][] = new double[numSlots][3];
         for (int a = 0; a < numSlots; a++) {
                 bandLength[a][0] = 0d;
                 bandLength[a][1] = 0d;

@@ -77,13 +77,12 @@ public class KSPwithSNR implements RA {
                     if ((id = cp.getVT().createLightpath(lp)) >= 0) {
                         // Single-hop routing (end-to-end lightpath)
                         lps[0] = cp.getVT().getLightpath(id);
-                        double centerFrequency = 192d * Math.pow(10,12) + (double)firstSlot[j]+ (double)(requiredSlots/2) * 12.5 * Math.pow(10,9);
                         int[] index = new int[links.length];
                         double SNR = 0;
                         for(k = 0; k < links.length; k++){     // finding the index of lightpath in the links
                             double[][] bandwidth = ((EONLink) cp.getPT().getLink(links[k])).getBW();
                             for (int a = 0; a < bandwidth[EONLink.numberofSlots][0]; a++){
-                                if(bandwidth[a][1] == centerFrequency){
+                                if(bandwidth[a][2] == (double)firstSlot[j]){
                                     index[k] = a;
                                 }
                             }
