@@ -23,13 +23,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="85" column="91" lean-forward="false" selection-start-line="85" selection-start-column="91" selection-end-line="85" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EONLink.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="547" column="29" lean-forward="false" selection-start-line="547" selection-start-column="29" selection-end-line="547" selection-end-column="29" />
+            <state relative-caret-position="1390">
+              <caret line="674" column="14" lean-forward="false" selection-start-line="674" selection-start-column="14" selection-end-line="674" selection-end-column="14" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
                 <element signature="docComment;method#getNumSlots#0;class#EONLink#0" expanded="false" />
                 <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
@@ -64,20 +83,8 @@
                 <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
                 <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
                 <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
                 <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="84" column="42" lean-forward="false" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -293,7 +300,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,10 +330,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ONS_Idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ONS_Idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,7 +366,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="Application.ONS_SNR">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -718,11 +747,11 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Unnamed" type="Application" factoryName="Application">
+    <configuration default="false" name="ONS_SNR" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Ons.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="simulation-myrmlsa.xml 2 100 200 20" />
+      <option name="PROGRAM_PARAMETERS" value="simulation-kspwithsnr.xml 2 100 200 20" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../XML" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -734,7 +763,7 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Unnamed" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ONS_SNR" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -753,7 +782,9 @@
       <workItem from="1481023070879" duration="4147000" />
       <workItem from="1481029401173" duration="2064000" />
       <workItem from="1481185405993" duration="20605000" />
-      <workItem from="1481274444091" duration="3316000" />
+      <workItem from="1481274444091" duration="3399000" />
+      <workItem from="1481286086870" duration="1320000" />
+      <workItem from="1481287991181" duration="11919000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1480853762837</created>
@@ -818,11 +849,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481285242890</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="KSPwithSNR is revised">
+      <created>1481285753328</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1481285753328</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54287000" />
+    <option name="totallyTimeSpent" value="67609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -831,30 +869,30 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4384858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18448023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -893,7 +931,8 @@
     <MESSAGE value="EONLink is revised except alpha1 and the coefficient." />
     <MESSAGE value="alpha1 and the coefficient are revised." />
     <MESSAGE value="First slot of channels is added to getBW" />
-    <option name="LAST_COMMIT_MESSAGE" value="First slot of channels is added to getBW" />
+    <MESSAGE value="KSPwithSNR is revised" />
+    <option name="LAST_COMMIT_MESSAGE" value="KSPwithSNR is revised" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -926,7 +965,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getNumSlots#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
@@ -961,9 +999,7 @@
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -972,7 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,7 +1031,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getNumSlots#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
@@ -1031,9 +1065,7 @@
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1042,7 +1074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,9 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,9 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,9 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1287,16 +1309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="124" column="12" lean-forward="false" selection-start-line="124" selection-start-column="12" selection-end-line="124" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Simulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="189" column="13" lean-forward="true" selection-start-line="189" selection-start-column="13" selection-end-line="189" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1308,19 +1320,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Util/MathFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/RA/RA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,53 +1331,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="14" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java" />
-    <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="210" column="20" lean-forward="false" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Modulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="260" column="7" lean-forward="true" selection-start-line="260" selection-start-column="7" selection-end-line="260" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;field#_64QAMSNR#0;class#Modulation#0" expanded="false" />
-            <element signature="docComment;method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
-            <element signature="method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
-            <element signature="docComment;method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
-            <element signature="method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
-            <element signature="docComment;method#getModulationName#0;class#Modulation#0" expanded="false" />
-            <element signature="method#getModulationName#0;class#Modulation#0" expanded="false" />
-            <element signature="docComment;method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
-            <element signature="method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
-            <element signature="docComment;method#getModulationReach#0;class#Modulation#0" expanded="false" />
-            <element signature="method#getModulationReach#0;class#Modulation#0" expanded="false" />
-            <element signature="docComment;method#getBestModulation#0;class#Modulation#0" expanded="false" />
-            <element signature="method#getBestModulation#0;class#Modulation#0" expanded="false" />
-            <element signature="docComment;method#getSNR#0;class#Modulation#0" expanded="false" />
-            <element signature="method#getSNR#0;class#Modulation#0" expanded="false" />
-            <element signature="docComment;method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
-            <element signature="method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Link.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1390,13 +1350,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/ControlPlane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1451">
-          <caret line="315" column="0" lean-forward="false" selection-start-line="315" selection-start-column="0" selection-end-line="315" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="docComment;method#newEvent#0;class#ControlPlane#0" expanded="false" />
-            <element signature="method#newEvent#0;class#ControlPlane#0" expanded="false" />
             <element signature="docComment;method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
             <element signature="method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
             <element signature="docComment;method#blockFlow#0;class#ControlPlane#0" expanded="false" />
@@ -1429,12 +1396,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Simulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Modulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="287" column="7" lean-forward="true" selection-start-line="287" selection-start-column="7" selection-end-line="287" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;field#_64QAMSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getModulationName#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getModulationName#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getModulationReach#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getModulationReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getBestModulation#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getBestModulation#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Util/MathFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1331">
+          <caret line="279" column="16" lean-forward="true" selection-start-line="279" selection-start-column="16" selection-end-line="279" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="547" column="29" lean-forward="false" selection-start-line="547" selection-start-column="29" selection-end-line="547" selection-end-column="29" />
+        <state relative-caret-position="1390">
+          <caret line="674" column="14" lean-forward="false" selection-start-line="674" selection-start-column="14" selection-end-line="674" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getNumSlots#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
@@ -1469,17 +1485,15 @@
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="84" column="42" lean-forward="false" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+        <state relative-caret-position="68">
+          <caret line="85" column="91" lean-forward="false" selection-start-line="85" selection-start-column="91" selection-end-line="85" selection-end-column="91" />
           <folding />
         </state>
       </provider>

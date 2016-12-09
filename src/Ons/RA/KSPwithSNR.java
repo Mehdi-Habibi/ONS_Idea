@@ -66,7 +66,7 @@ public class KSPwithSNR implements RA {
 
             // First-Fit spectrum assignment in BPSK Ons.Modulation
             int[] firstSlot;
-            for (int i = 0; i < links.length; i++) {
+            for (int i = 0; i < 1; i++) {
                 // Try the slots available in each link
                 firstSlot = ((EONLink) cp.getPT().getLink(links[i])).getSlotsAvailableToArray(requiredSlots);
                 for (int j = 0; j < firstSlot.length; j++) {
@@ -79,18 +79,26 @@ public class KSPwithSNR implements RA {
                         lps[0] = cp.getVT().getLightpath(id);
                         int[] index = new int[links.length];
                         double SNR = 0;
-                        for(k = 0; k < links.length; k++){     // finding the index of lightpath in the links
+                        for(k = 0; k < links.length; k++){
                             double[][] bandwidth = ((EONLink) cp.getPT().getLink(links[k])).getBW();
-                            for (int a = 0; a < bandwidth[EONLink.numberofSlots][0]; a++){
+                            for (int a = 0; a < bandwidth[(EONLink.numSlots - 1)][0]; a++){     // finding the index of lightpath in the links
                                 if(bandwidth[a][2] == (double)firstSlot[j]){
+                                    System.out.println("firstSlot[j]: " + Integer.toString(firstSlot[j]));
+                                    System.out.println("firstSlot[j] (double): " + Double.toString((double)firstSlot[j]));
+                                    System.out.println("bandwidth[a][2]: " + Double.toString(bandwidth[a][2]));
+                                    System.out.println("a: " + Integer.toString(a));
                                     index[k] = a;
                                 }
                             }
                             double temp = ((EONLink) cp.getPT().getLink(links[k])).getSNR()[index[k]];
                             SNR = (SNR * temp) / (SNR + temp);
                         }
-                        if (cp.acceptFlow(flow.getID(), lps) && SNR >= Modulation.getSNR(modulation)) {
-                            return;
+                        //System.out.println("final SNR: " + Double.toString(SNR));
+
+                        if (cp.acceptFlow(flow.getID(), lps)) {
+                            if(Modulation.getSNR(modulation) <= SNR){
+                                return;
+                            }
                         } else {
                             // Something wrong
                             // Dealocates the lightpath in VT and try again
