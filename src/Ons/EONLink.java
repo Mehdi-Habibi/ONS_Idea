@@ -16,13 +16,14 @@ public class EONLink extends Link {
     protected static int numSlots;
     protected long slots[];
     protected static int guardband;
-    protected double alpha = 2.2/8.6;     // Np/m = 0.22 d/km
+    protected double alpha = (0.22 * 1000d)/8.685889638;     // Np/m (= 0.22 d/km), 1 Np = 8.685889638 dB
+    protected double alpha1 = 2d * (0.22 * 1000d)/8.685889638;
     protected double ls = 80000d;
     protected double slotSize = 12.5 * Math.pow(10,9);
     protected double beta2 = 21.7 * Math.pow(10,-27);
-    protected double gamma = 1.3 * Math.pow(10,-3);
+    protected double gamma = 1.3 * Math.pow(10,3);
     protected double nsp = 1.8;
-    public static int numberofSlots = numSlots;
+
 
     public EONLink(int id, int src, int dst, double delay, double weight, int numSlots, int guardband) {
         super(id, src, dst, delay, weight);
@@ -544,21 +545,22 @@ public class EONLink extends Link {
      */
     public double[][] getBW(){
         int chNum = -1;
-        double bandLength[][] = new double[numSlots][2];
+        double bandLength[][] = new double[numSlots][2];     // bandLength[][0] is for bandwidths and bandLength[][1] is for center frequencies
+        for (int a = 0; a < numSlots; a++) {
+                bandLength[a][0] = 0d;
+                bandLength[a][1] = 0d;
+        }
         for (int i = 0; i < numSlots; i++) {
-            if (slots[i] == 1){
+            if (slots[i] != 0 && slots[i] != -1){
                 if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
                     chNum++;
-                    bandLength[chNum][0] = 0.0;
-                    bandLength[chNum][1] = 192d * Math.pow(10,12)+ 12.5 * Math.pow(10,9) * (double)i;
-
+                    bandLength[chNum][1] = 192d * Math.pow(10,12)+ slotSize * Math.pow(10,9) * ((double)i - 1d);
                 }
                 bandLength[chNum][0] = bandLength[chNum][0] + slotSize;
-                bandLength[chNum][1] = bandLength[chNum][1] + (slotSize/2.0);
-
+                bandLength[chNum][1] = bandLength[chNum][1] + (slotSize/2d);
             }
         }
-        bandLength[numSlots][0] = (double)chNum;
+        bandLength[numSlots - 1][0] = (double)chNum + 1d;
         return bandLength;
     }
 
@@ -573,39 +575,39 @@ public class EONLink extends Link {
      */
     public double[] getSNR(){
         double[][] BW = getBW();     // bandwidth and center frequencies
-        int channelNum = (int)BW[numSlots][0];     // number of channels
+        int channelNum = (int)BW[numSlots - 1][0];     // number of channels
         double pi = 3.14159265359;     // pi!
         double h = 6.62607004 * Math.pow(10,-34);     // Plank constant
         double e = 2.71828182845;     // Euler's number
-        double L = getWeight();     // fiber length
-        double Ns = Math.floor(L / ls) + 1d;     // number of spans
-        double leff = (1d - Math.exp(-2d*alpha*ls))/(2d*alpha);     // effective length
+        double L = getWeight() * 1000d;     // fiber length
+        double Ns = Math.ceil(L / ls);     // number of spans
+        double leff = (1d - Math.exp(-2d*alpha1*ls))/(2d*alpha1);     // effective length
         double power = 0d;     // power of channels (dB)
         double[][] psi = new double[channelNum][channelNum];     // psi in nonlinear part of noise
-        double den = (2d * pi * beta2)/(2d * alpha);     // denominator of psi
+        double den = (2d * pi * beta2)/(2d * alpha1);     // denominator of psi
         double num1,num2;     // two parts of nominator of psi for j!=k
         double[] G = new double[channelNum];     // PSD of channels
         double[] Gnli = new double[channelNum];     // PSD of nonlinear part of noise
         double[] GASE = new double[channelNum];     // PSD of ASE noise
-        double[] SNR = new double[channelNum];
+        double[] SNR = new double[channelNum];     // SNR vector for channels
 
         for(int i = 0; i < channelNum; i++){
             G[i] = Math.pow(10, (power - 30d)/10d);
             Gnli[i] = 0d;
-            GASE[i] = Math.pow(e,alpha*L) * nsp * h * BW[i][1];
+            GASE[i] = Ns * (Math.exp(alpha*L) - 1d) * nsp * h * BW[i][1];     // Ns is needed
         }
 
-        for (int j = 0; j < channelNum; j++) {
-            for(int k = 0; k < channelNum; k++){
+        for (int k = 0; k < channelNum; k++) {
+            for(int j = 0; j < channelNum; j++){
                 if(j == k){
-                    psi[j][j] = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha,-1) * (beta2 / 2d) * Math.pow(BW[j][0],2))/den;
-                    Gnli[k] = Gnli[k] + (16d/27d) *Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k] * 2d;
+                    psi[j][j] = Ns * MathFunctions.asinh((Math.pow(pi,2) / 2d) * Math.pow(2 * alpha1,-1) * beta2 * Math.pow(BW[j][0],2))/den;
+                    Gnli[k] = Gnli[k] + 2d * Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k];
                 }
                 else{
-                    num1 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha,-1) * beta2 * (BW[j][1] - BW[k][1] + BW[j][0]/2d) * BW[k][0]);
-                    num2 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha,-1) * beta2 * (BW[j][1] - BW[k][1] - BW[j][0]/2d) * BW[k][0]);
-                    psi[j][k] = (num1 + num2) / (2 * den);
-                    Gnli[k] = Gnli[k] + (16d/27d) *Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k] * 2d;
+                    num1 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha1,-1) * beta2 * (BW[j][1] - BW[k][1] + BW[j][0]/2d) * BW[k][0]);
+                    num2 = MathFunctions.asinh(Math.pow(pi,2) * Math.pow(2 * alpha1,-1) * beta2 * (BW[j][1] - BW[k][1] - BW[j][0]/2d) * BW[k][0]);
+                    psi[j][k] = Ns * (num1 - num2) / (2d * den);
+                    Gnli[k] = Gnli[k] + 2d * Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k] * 2d;
                 }
             }
         }
