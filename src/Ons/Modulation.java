@@ -66,35 +66,35 @@ public final class Modulation {
     /**
      * Represents the threshold SNR of the BPSK.
      */
-    public static final int _BPSKSNR = 6;
+    public static final double _BPSKSNR = 6d;
     /**
      * Represents the threshold SNR of the QPSK.
      */
-    public static final int _QPSKSNR = 12;
+    public static final double _QPSKSNR = 12d;
     /**
      * Represents the threshold SNR of the 8QAM.
      */
-    public static final int _8QAMSNR = 18;
+    public static final double _8QAMSNR = 18d;
     /**
      * Represents the threshold SNR of the 16QAM.
      */
-    public static final int _16QAMSNR = 24;
+    public static final double _16QAMSNR = 24d;
     /**
      * Represents the threshold SNR of the 32QAM.
      */
-    public static final int _32QAMSNR = 30;
+    public static final double _32QAMSNR = 30d;
     /**
      * Represents the threshold SNRof the 64QAM.
      */
-    public static final int _64QAMSNR = 36;
+    public static final double _64QAMSNR = 36d;
     /**
      * Represents the threshold SNR of the 128QAM.
      */
-    public static final int _128QAMSNR = 42;
+    public static final double _128QAMSNR = 42d;
     /**
      * Represents the threshold SNR of the 256QAM.
      */
-    public static final int _256QAMSNR = 48;
+    public static final double _256QAMSNR = 48d;
 
 
 
@@ -259,7 +259,7 @@ public final class Modulation {
      * @param idModulation the modulation id
      * @return the threshold SNR of modulation
      */
-    public static int getSNR(int idModulation){
+    public static double getSNR(int idModulation){
         switch (idModulation){
             case 0:
                 return _BPSKSNR;
@@ -286,7 +286,7 @@ public final class Modulation {
      * @param SNR the SNR
      * @return the best modulation format for this SNR
      */
-    public static int getBestModulationSNR(double SNR){
+    public static double getBestModulationSNR(double SNR){
         if (_BPSKSNR > SNR) {
             return -1;
         } else {

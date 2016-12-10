@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * Aug 2012.
  * @author onsteam
  */
-public class KSPwithSNR implements RA {
+public class KSPBestModulation implements RA {
 
     private ControlPlaneForRA cp;
     private WeightedGraph graph;
@@ -77,7 +77,6 @@ public class KSPwithSNR implements RA {
                     if ((id = cp.getVT().createLightpath(lp)) >= 0) {
                         // Single-hop routing (end-to-end lightpath)
                         lps[0] = cp.getVT().getLightpath(id);
-
                         int[] index = new int[links.length];
                         double SNR = 0;
                         for(k = 0; k < links.length; k++){
@@ -100,7 +99,7 @@ public class KSPwithSNR implements RA {
                                 SNR = (SNR * temp) / (SNR + temp);
                             }
                         }
-                        //System.out.println("final SNR: " + Double.toString(SNR));
+                        System.out.println("final SNR: " + Double.toString(SNR));
                         //System.out.println("Threshodl: " + Double.toString(Modulation.getSNR(modulation)));
 
                         if (cp.acceptFlow(flow.getID(), lps)) {

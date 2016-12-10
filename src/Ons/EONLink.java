@@ -553,7 +553,7 @@ public class EONLink extends Link {
             if (slots[i] != 0 && slots[i] != -1){
                 if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
                     chNum++;
-                    bandLength[chNum][1] = 192d * Math.pow(10,12)+ slotSize * ((double)i - 1d);
+                    bandLength[chNum][1] = 192d * Math.pow(10,12)+ slotSize * (double)i;
                     //System.out.println("initial value: "+Double.toString(bandLength[chNum][1]));
                     bandLength[chNum][2] = (double)i;
                 }
@@ -591,9 +591,6 @@ public class EONLink extends Link {
         //System.out.println("nsp: "+Double.toString(nsp));
 
         double[][] BW = getBW();     // bandwidth and center frequencies
-        //System.out.println("bandwidth: "+Double.toString(BW[i][0]));
-        //System.out.println("center frequency: "+Double.toString(BW[i][1]));
-        //System.out.println("first slot index: "+Double.toString(BW[i][2]));
 
         int channelNum = (int)BW[numSlots - 1][0];     // number of channels
         //System.out.println("channelNum: "+Integer.toString(channelNum));
@@ -616,7 +613,7 @@ public class EONLink extends Link {
         double leff = (1d - Math.pow(e,-2d*alpha*ls))/(2d*alpha);     // effective length
         //System.out.println("leff: "+Double.toString(leff));
 
-        double power = 0d;     // power of channels (dB)
+        double power = -3d;     // power of channels (dB)
         //System.out.println("power: "+Double.toString(power));
 
         double[][] psi = new double[channelNum][channelNum];     // psi in nonlinear part of noise
@@ -634,8 +631,11 @@ public class EONLink extends Link {
         for(int i = 0; i < channelNum; i++){
             G[i] = Math.pow(10, (power - 30d)/10d)/BW[i][0];
             //System.out.println("G[i]: "+Double.toString(G[i]));
+            //System.out.println("BW[i][0]: "+Double.toString(BW[i][0]));
             Gnli[i] = 0d;
             GASE[i] = Ns * (Math.pow(e,alpha*ls) - 1d) * nsp * h * BW[i][1];     // Ns is needed
+            //System.out.println("center frequency: "+Double.toString(BW[i][1]));
+            //System.out.println("exp: "+Double.toString((Math.pow(e,alpha*ls) - 1d)));
             //System.out.println("GASE:"+Double.toString(GASE[i]));
 
         }
@@ -643,22 +643,23 @@ public class EONLink extends Link {
         for (int k = 0; k < channelNum; k++) {
             for(int j = 0; j < channelNum; j++){
                 if(j == k){
-                    psi[j][j] = Ns * MathFunctions.asinh((pi * pi / 2d) * (1 / (2d * alpha)) * beta2 * Math.pow(BW[j][0],2))/den;
+                    psi[j][j] = (Ns * MathFunctions.asinh((pi * pi / 2d) * (1d / (2d * alpha)) * beta2 * BW[j][0] * BW[j][0]))/den;
                     //System.out.println("psi[j][j]:"+Double.toString(psi[j][j]));
                     //System.out.println("asinh:"+Double.toString(MathFunctions.asinh(100)));     // testing asinh()
                     //System.out.println("psi[j][j]*den:"+Double.toString(psi[j][j] * den));
 
-                    temp = 2d * Math.pow((gamma * leff),2) * G[k] * G[j] * G[j] * psi[j][k];
+                    temp = (2d) * Math.pow((gamma * leff),2) * G[k] * G[j] * G[j] * psi[j][k];
                     //System.out.println("temp(k,k):"+Double.toString(temp));
 
                     Gnli[k] = Gnli[k] + temp;
                     //System.out.println("Gnli[k]:"+Double.toString(Gnli[k]));
+                    temp = 0d;
                 }
                 else{
-                    num1 = Ns * MathFunctions.asinh((pi * pi) * (1 / (2d * alpha)) * beta2 * (BW[j][1] - BW[k][1] + (BW[j][0]/2d)) * BW[k][0]);
+                    num1 = Ns * MathFunctions.asinh((pi * pi) * (1d / (2d * alpha)) * beta2 * (BW[j][1] - BW[k][1] + (BW[j][0]/2d)) * BW[k][0]);
                     //System.out.println("num1:"+Double.toString(num1));
 
-                    num2 = Ns * MathFunctions.asinh((pi * pi) * (1 / (2d * alpha)) * beta2 * (BW[j][1] - BW[k][1] - (BW[j][0]/2d)) * BW[k][0]);
+                    num2 = Ns * MathFunctions.asinh((pi * pi) * (1d / (2d * alpha)) * beta2 * (BW[j][1] - BW[k][1] - (BW[j][0]/2d)) * BW[k][0]);
                     //System.out.println("num2:"+Double.toString(num2));
 
                     //System.out.println("num1-num2:"+Double.toString(num1 - num2));
@@ -666,17 +667,31 @@ public class EONLink extends Link {
                     psi[j][k] = (num1 - num2) / (2d * den);
                     //System.out.println("psi[j][k]:"+Double.toString(psi[j][k]));
 
-                    temp = 2d * Math.pow(gamma * leff,2) * G[k] * G[j] * G[j] * psi[j][k] * 2d;
+                    temp = (2d) * Math.pow((gamma * leff),2) * G[k] * G[j] * G[j] * psi[j][k] * 2d;
                     //System.out.println("temp(j,k):"+Double.toString(temp));
 
                     Gnli[k] = Gnli[k] + temp;
+                    temp = 0d;
                 }
             }
             //System.out.println("Gnli[k]: "+Double.toString(Gnli[k]));
+
+
+
         }
         for(int i = 0; i < channelNum; i++){
-            SNR[i] = G[i] / (Gnli[i] + GASE[i]);
-            //System.out.println("SNR: " + Double.toString(SNR[i]));
+            SNR[i] =G[i] / (Gnli[i] + GASE[i]);
+            //System.out.println("G[i]: " + Double.toString(G[i]));
+            //System.out.println("(Gnli[i] + GASE[i]): " + Double.toString((Gnli[i] + GASE[i])));
+
+            /*
+            if(SNR[i]<12) {
+                System.out.println("SNR[i]: " + Double.toString(SNR[i]));
+                System.out.println("Gnli[i]: " + Double.toString(Gnli[i]));
+                System.out.println("i: " + Integer.toString(i));
+                System.out.println("Ns: " + Double.toString(Ns));
+            }
+            */
         }
         return SNR;
     }
