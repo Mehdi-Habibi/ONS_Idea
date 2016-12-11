@@ -34,6 +34,7 @@ public class KSPwithSNR implements RA {
 
     @Override
     public void flowArrival(Flow flow) {
+        int SNRBlock = 0;     //(New) 1 if SNR is the reason of blocking
         int[] nodes;
         int[] links;
         long id;
@@ -77,37 +78,31 @@ public class KSPwithSNR implements RA {
                     if ((id = cp.getVT().createLightpath(lp)) >= 0) {
                         // Single-hop routing (end-to-end lightpath)
                         lps[0] = cp.getVT().getLightpath(id);
-
-                        int[] index = new int[links.length];
-                        double SNR = 0;
-                        for(k = 0; k < links.length; k++){
-                            double[][] bandwidth = ((EONLink) cp.getPT().getLink(links[k])).getBW();
-                            for (int a = 0; a < bandwidth[(EONLink.numSlots - 1)][0]; a++){     // finding the index of lightpath in the links
-                                if(bandwidth[a][2] == (double)firstSlot[j]){
-                                    //System.out.println("firstSlot[j]: " + Integer.toString(firstSlot[j]));
-                                    //System.out.println("firstSlot[j] (double): " + Double.toString((double)firstSlot[j]));
-                                    //System.out.println("bandwidth[a][2]: " + Double.toString(bandwidth[a][2]));
-                                    //System.out.println("a: " + Integer.toString(a));
-                                    index[k] = a;
+                        if (cp.acceptFlow(flow.getID(), lps)) {
+                            int[] index = new int[links.length];
+                            double SNR = 0;
+                            for(k = 0; k < links.length; k++){
+                                double[][] bandwidth = ((EONLink) cp.getPT().getLink(links[k])).getBW();
+                                for (int a = 0; a < bandwidth[(EONLink.numSlots - 1)][0]; a++){     // finding the index of lightpath in the links
+                                    if(bandwidth[a][2] == (double)firstSlot[j]){
+                                        index[k] = a;
+                                    }
+                                }
+                                double temp = ((EONLink) cp.getPT().getLink(links[k])).getSNR()[index[k]];
+                                if(k == 0){
+                                    SNR = temp;
+                                }
+                                else{
+                                    SNR = (SNR * temp) / (SNR + temp);
                                 }
                             }
-                            double temp = ((EONLink) cp.getPT().getLink(links[k])).getSNR()[index[k]];
-                            //System.out.println("temp: " + Double.toString(temp));
-                            if(k == 0){
-                                SNR = temp;
-                            }
-                            else{
-                                SNR = (SNR * temp) / (SNR + temp);
-                            }
-                        }
-                        //System.out.println("final SNR: " + Double.toString(SNR));
-                        //System.out.println("Threshodl: " + Double.toString(Modulation.getSNR(modulation)));
-
-                        if (cp.acceptFlow(flow.getID(), lps)) {
                             if(Modulation.getSNR(modulation) < SNR){
                                 return;
                             }
-                        } else {
+                            SNRBlock = 1;
+                            //System.out.println("SNRBlock: "+Integer.toString(SNRBlock));
+                        }
+                        else {
                             // Something wrong
                             // Dealocates the lightpath in VT and try again
                             cp.getVT().deallocatedLightpath(id);
@@ -117,7 +112,14 @@ public class KSPwithSNR implements RA {
             }
         }
         // Block the call
-        cp.blockFlow(flow.getID());
+        if(SNRBlock == 1){
+            System.out.println("SNRBlock: "+Integer.toString(SNRBlock));
+            cp.SNRblockFlow(flow.getID());
+        }
+        else{
+            System.out.println(Integer.toString(0));
+            cp.blockFlow(flow.getID());
+        }
     }
 
     @Override

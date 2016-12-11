@@ -21,6 +21,8 @@ public interface ControlPlaneForRA {
 
     public boolean blockFlow(long id);
 
+    public boolean SNRblockFlow(long id);     //(New)
+
     public boolean rerouteFlow(long id, LightPath[] lightpaths);
     
     public Flow getFlow(long id);

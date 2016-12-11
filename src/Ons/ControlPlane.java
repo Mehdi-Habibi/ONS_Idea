@@ -133,6 +133,33 @@ public class ControlPlane implements ControlPlaneForRA { // Ons.RA is Routing As
             return true;
         }
     }
+
+    /**
+     * Removes a given Ons.Flow object from the list of active flows due to low SNR.
+     *
+     * @param id unique identifier of the Ons.Flow object
+     * @return true if operation was successful, or false if a problem occurred
+     */
+    @Override
+    public boolean SNRblockFlow(long id) {     //(New)
+        Flow flow;
+
+        if (id < 0) {
+            throw (new IllegalArgumentException());
+        } else {
+            if (!activeFlows.containsKey(id)) {
+                return false;
+            }
+            flow = activeFlows.get(id);
+            if (mappedFlows.containsKey(flow)) {
+                return false;
+            }
+            activeFlows.remove(id);
+            tr.blockFlow(flow);
+            st.SNRblockFlow(flow);
+            return true;
+        }
+    }
     
     /**
      * Removes a given Ons.Flow object from the Physical Topology and then

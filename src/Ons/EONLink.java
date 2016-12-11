@@ -613,7 +613,7 @@ public class EONLink extends Link {
         double leff = (1d - Math.pow(e,-2d*alpha*ls))/(2d*alpha);     // effective length
         //System.out.println("leff: "+Double.toString(leff));
 
-        double power = -3d;     // power of channels (dB)
+        double power = 0d;     // power of channels (dB)
         //System.out.println("power: "+Double.toString(power));
 
         double[][] psi = new double[channelNum][channelNum];     // psi in nonlinear part of noise

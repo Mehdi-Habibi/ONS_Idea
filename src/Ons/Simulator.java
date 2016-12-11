@@ -216,10 +216,6 @@ public class Simulator {
                 }
                 System.out.println(st.fancyStatistics(simType));
             } else {
-                System.out.println("*****");
-                if (forcedLoad != 0) {
-                    System.out.println("Load:" + Double.toString(forcedLoad));
-                }
                 st.printStatistics(simType);
             }
             

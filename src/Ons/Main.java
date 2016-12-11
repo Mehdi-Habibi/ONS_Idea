@@ -12,7 +12,6 @@ package Ons;/*
  * @author onsteam
  */
 public class Main {
-
     /**
      * Instantiates a Ons.Simulator object and takes the arguments from the command line.
      * Based on the number of arguments, can detect if there are too many or too few,

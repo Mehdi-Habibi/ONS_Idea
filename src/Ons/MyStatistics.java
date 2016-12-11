@@ -13,8 +13,12 @@ public class MyStatistics {
     private int departures;
     private int accepted;
     private int blocked;
+    private int SNRblocked;     //(New)
+    private int Spectrumblocked;     //(New)
     private long requiredBandwidth;
     private long blockedBandwidth;
+    private long SNRblockedBandwidth;     //(New)
+    private long SpectrumblockedBandwidth;     //(New)
     private int numNodes;
     private int[][] arrivalsPairs;
     private int[][] blockedPairs;
@@ -65,9 +69,13 @@ public class MyStatistics {
         departures = 0;
         accepted = 0;
         blocked = 0;
+        SNRblocked = 0;
+        Spectrumblocked = 0;
 
         requiredBandwidth = 0;
         blockedBandwidth = 0;
+        SNRblockedBandwidth = 0;
+        SpectrumblockedBandwidth = 0;
 
         numfails = 0;
         flowfails = 0;
@@ -134,7 +142,7 @@ public class MyStatistics {
         this.blockedBandwidthPairsDiff = new int[numNodes][numNodes][numClasses];
         //
         if(pt instanceof EONPhysicalTopology) {
-            this.modulations = new long[EONPhysicalTopology.getMaxModulation() + 1];
+            this.modulations = new long[8];
         } 
     }
 
@@ -161,12 +169,35 @@ public class MyStatistics {
      *
      * @param flow the blocked Ons.Flow object
      */
+    public void SNRblockFlow(Flow flow) {     //(New)
+        if (this.numberArrivals > this.minNumberArrivals) {
+            int cos = flow.getCOS();
+            this.blocked++;
+            this.SNRblocked++;
+            this.blockedDiff[cos]++;
+            this.blockedBandwidth += flow.getRate();
+            this.SNRblockedBandwidth += flow.getRate();
+            this.blockedBandwidthDiff[cos] += flow.getRate();
+            this.blockedPairs[flow.getSource()][flow.getDestination()]++;
+            this.blockedPairsDiff[flow.getSource()][flow.getDestination()][cos]++;
+            this.blockedBandwidthPairs[flow.getSource()][flow.getDestination()] += flow.getRate();
+            this.blockedBandwidthPairsDiff[flow.getSource()][flow.getDestination()][cos] += flow.getRate();
+        }
+    }
+
+    /**
+     * Adds a blocked flow to the statistics.
+     *
+     * @param flow the blocked Ons.Flow object
+     */
     public void blockFlow(Flow flow) {
         if (this.numberArrivals > this.minNumberArrivals) {
             int cos = flow.getCOS();
             this.blocked++;
+            this.Spectrumblocked++;
             this.blockedDiff[cos]++;
             this.blockedBandwidth += flow.getRate();
+            this.SpectrumblockedBandwidth += flow.getRate();
             this.blockedBandwidthDiff[cos] += flow.getRate();
             this.blockedPairs[flow.getSource()][flow.getDestination()]++;
             this.blockedPairsDiff[flow.getSource()][flow.getDestination()][cos]++;
@@ -331,7 +362,7 @@ public class MyStatistics {
      * @param simType 0 if the physicalTopology is WDM; 1 if physicalTopology is EON
      */
     public void printStatistics(int simType) {
-        float acceptProb, blockProb, bbr, meanK;
+        float acceptProb, blockProb, SNRblockProb, spectrumblockProb, bbr, SNRbbr, spectrumbbr, meanK;
         float bpDiff[], bbrDiff[];
         if (accepted == 0) {
             acceptProb = 0;
@@ -341,10 +372,18 @@ public class MyStatistics {
         }
         if (blocked == 0) {
             blockProb = 0;
+            SNRblockProb = 0;
+            spectrumblockProb = 0;
             bbr = 0;
+            SNRbbr = 0;
+            spectrumbbr = 0;
         } else {
             blockProb = ((float) blocked) / ((float) arrivals) * 100;
+            SNRblockProb = ((float) SNRblocked) / ((float) arrivals) * 100;
+            spectrumblockProb = ((float) Spectrumblocked) / ((float) arrivals) * 100;
             bbr = ((float) blockedBandwidth) / ((float) requiredBandwidth) * 100;
+            SNRbbr = ((float) SNRblockedBandwidth) / ((float) requiredBandwidth) * 100;
+            spectrumbbr = ((float) SpectrumblockedBandwidth) / ((float) requiredBandwidth) * 100;
         }
         bpDiff = new float[numClasses];
         bbrDiff = new float[numClasses];
@@ -359,30 +398,34 @@ public class MyStatistics {
         }
 
         String stats = "";
-        stats += "BR \t: " + Float.toString(blockProb) + "%\n";
-        stats += "BBR \t: " + Float.toString(bbr) + "%\n";
-        stats += "Called Blocked by COS (%)" + "\n";
+        stats += Float.toString(blockProb) + ", ";
+        stats += Float.toString(SNRblockProb) + ", ";
+        stats += Float.toString(spectrumblockProb) + ", ";
+        stats += Float.toString(bbr) + ", ";
+        stats += Float.toString(SNRbbr) + ", ";
+        stats += Float.toString(spectrumbbr) + ", ";
         for (int i = 0; i < numClasses; i++) {
-            stats += "BP-" + Integer.toString(i) + " " + Float.toString(bpDiff[i]) + "%\n";
+            stats += Float.toString(bpDiff[i]) + ", ";
         }
-        stats += "\nLPs: " + numLightPaths + "\n";
+        stats += numLightPaths + ", ";
         double freeTransponders = (float) numTransponders/times; //free transponders/times-requests
         double freeTranspondersRatio = (float) ((freeTransponders*100.0)/MAX_NumTransponders);     
-        stats += "Available Transponders: " + freeTranspondersRatio + "%\n";
+        stats += freeTranspondersRatio + ", ";
         double used = (double) this.usedTransponders / (double) accepted;
-        stats += "Transponders per request: "+used+"\n";
+        stats += used+", ";
         used = (double) this.virtualHops / (double) accepted;
-        stats += "Virtual Hops per request: "+used+"\n";
+        stats += used+", ";
         used = (double) this.physicalHops / (double) accepted;
-        stats += "Physical Hops per request: "+used+"\n";
+        stats += used+", ";
         
         if(simType == 1){
             double averageSpectrumAvailable = availableSlots/times;
             double spectrumAvailableRatio = (averageSpectrumAvailable*100.0)/MAX_AvailableSlots;
-            stats += "Spectrum Available: " + spectrumAvailableRatio + "%\n";
-            for(int i = 0; i < modulations.length; i++){
-                stats += Modulation.getModulationName(i) +" Modulation used: " + Float.toString((float) modulations[i]/(float) numLightPaths*100) + "%\n";
+            stats += spectrumAvailableRatio + ", ";
+            for(int i = 0; i < modulations.length - 1; i++){
+                stats += Float.toString((float) modulations[i]/(float) numLightPaths*100) + ", ";
             }
+            stats += Float.toString((float) modulations[modulations.length-1]/(float) numLightPaths*100);
         }
         System.out.println(stats);
     }
