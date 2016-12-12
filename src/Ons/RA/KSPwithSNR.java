@@ -35,8 +35,6 @@ public class KSPwithSNR implements RA {
     @Override
     public void flowArrival(Flow flow) {
         long counting = 0;
-        boolean SNRblock;
-        boolean specBlock;
         int[] nodes;
         int[] links;
         long id;
@@ -73,11 +71,6 @@ public class KSPwithSNR implements RA {
                 // Try the slots available in each link
                 firstSlot = ((EONLink) cp.getPT().getLink(links[i])).getSlotsAvailableToArray(requiredSlots);
                 for (int j = 0; j < firstSlot.length; j++) {
-
-                    SNRblock = false;
-                    specBlock = false;
-
-
                     // Now you create the lightpath to use the createLightpath VT
                     EONLightPath lp = cp.createCandidateEONLightPath(flow.getSource(), flow.getDestination(), links,
                             firstSlot[j], (firstSlot[j] + requiredSlots - 1), modulation);
@@ -94,43 +87,16 @@ public class KSPwithSNR implements RA {
 
                         SNR snr = new SNR(lp,usedLinks );
                         double lightpathSNR = snr.getLightPathSNR();
-
-
-                        if(Modulation.getSNR(modulation) > lightpathSNR){
-                            SNRblock = true;
-                        }
-                        else{SNRblock = false;}
-
-
-                        //if(cp.acceptFlow(flow.getID(), lps)){
-                        //    specBlock = false;
-                        //}
-                        //else{specBlock = true;}
-
-
-                        //if(cp.acceptFlow(flow.getID(), lps) && SNRblock){
-                        //    counting = counting + 1;
-                        //}
-                        //int dash = cp.getVT().getLightpathBWUsed(id);
-                        //System.out.println("1: "+Integer.toString(cp.getVT().getLightpathBWUsed(id)));
-                        //System.out.println("rate: "+Integer.toString(flow.getRate()));
                             if (cp.MyacceptFlow(flow.getID(), lps)) {
-                                //counting++;
-                                //int uuu2 = cp.getVT().getLightpathBWUsed(id);
-                                //System.out.println("2: "+Integer.toString(uuu2));
+                                counting++;
                                 if(Modulation.getSNR(modulation) < lightpathSNR) {
                                 cp.acceptFlow(flow.getID(), lps);
-                                    //System.out.println("2: "+Integer.toString(uuu2));
                                 return;
                                 }
                                 else{
-                                    //lp.removeFlowOnLightPath(flow.getRate());
                                     cp.getVT().deallocatedLightpath(id);
                                 }
                             } else {
-                                //lp.removeFlowOnLightPath(dash);
-                                //int uuu3 = cp.getVT().getLightpathBWUsed(id);
-                                //System.out.println("3: "+Integer.toString(uuu3));
                                 // Something wrong
                                 // Dealocates the lightpath in VT and try again
                                 cp.getVT().deallocatedLightpath(id);
@@ -141,12 +107,12 @@ public class KSPwithSNR implements RA {
             }
         }
         // Block the call
-       // if(counting > 0){
-       //     cp.SNRblockFlow(flow.getID());
-       // }
-       // else{
+        if(counting > 0){
+            cp.SNRblockFlow(flow.getID());
+        }
+        else{
             cp.blockFlow(flow.getID());
-       // }
+        }
     }
 
     @Override

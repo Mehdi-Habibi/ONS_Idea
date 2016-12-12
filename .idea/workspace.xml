@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="Almost done!">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ons/Util/SNR.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/EONLink.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/EONLink.class" />
+    <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/ControlPlane.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/ControlPlane.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/RA/ControlPlaneForRA.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/RA/ControlPlaneForRA.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/ControlPlane.java" afterPath="$PROJECT_DIR$/src/Ons/ControlPlane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/EONLink.java" afterPath="$PROJECT_DIR$/src/Ons/EONLink.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java" afterPath="$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/VirtualTopology.java" afterPath="$PROJECT_DIR$/src/Ons/VirtualTopology.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/Util/SNR.java" afterPath="$PROJECT_DIR$/src/Ons/Util/SNR.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SNR.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SNR.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ons/Util/SNR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="289">
               <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -46,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="120" column="69" lean-forward="false" selection-start-line="120" selection-start-column="69" selection-end-line="120" selection-end-column="69" />
+            <state relative-caret-position="267">
+              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -332,8 +328,8 @@
         <option value="$PROJECT_DIR$/src/Ons/VirtualTopology.java" />
         <option value="$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java" />
         <option value="$PROJECT_DIR$/src/Ons/ControlPlane.java" />
-        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
         <option value="$PROJECT_DIR$/src/Ons/Util/SNR.java" />
+        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
       </list>
     </option>
   </component>
@@ -947,7 +943,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Ons.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="simulation-kspwithsnr.xml 2 150 550 50" />
+      <option name="PROGRAM_PARAMETERS" value="simulation-kspwithsnr.xml 2 150 1000 200" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../XML" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -986,7 +982,7 @@
       <workItem from="1481369948314" duration="17278000" />
       <workItem from="1481395254433" duration="14520000" />
       <workItem from="1481418986134" duration="55000" />
-      <workItem from="1481466273215" duration="26178000" />
+      <workItem from="1481466273215" duration="28509000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1480853762837</created>
@@ -1079,15 +1075,22 @@
       <option name="project" value="LOCAL" />
       <updated>1481419037180</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Almost done!">
+      <created>1481510727714</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1481510727714</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135148000" />
+    <option name="totallyTimeSpent" value="137479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1840,17 +1843,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="120" column="69" lean-forward="false" selection-start-line="120" selection-start-column="69" selection-end-line="120" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Util/SNR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="289">
           <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1860,6 +1855,14 @@
             <element signature="docComment;method#getLightPathSNR#0;class#SNR#0" expanded="false" />
             <element signature="method#getLightPathSNR#0;class#SNR#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

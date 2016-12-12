@@ -21,7 +21,7 @@ public class SNR {
     public static double pi = 3.14159265359;     // pi!
     public static double h = 6.62607004 * Math.pow(10,-34);     // Plank constant
     public static double e = 2.71828182845;     // Euler's number
-    public static double power = 3d;     // power of channels (dB)
+    public static double power = 0d;     // power of channels (dB)
     public static double slotSize = 12.5 * Math.pow(10,9);
     public EONLink[] links;
     public EONLightPath lp;
