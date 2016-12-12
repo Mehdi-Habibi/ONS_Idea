@@ -64,40 +64,56 @@ public class KSPRandomFit implements RA {
 
             // First-Fit spectrum assignment in BPSK Ons.Modulation
             int[] first;
+            int[] firstSlot;
             // Try the slots available in each link
             first = ((EONLink) cp.getPT().getLink(links[0])).getSlotsAvailableToArray(requiredSlots);
+
+
+
+
             int[] RandomIndexes = new int[first.length];
             boolean check = true;
             Random R = new Random();
-            // Assigning first random
-            RandomIndexes[0] = R.nextInt(first.length);
-            System.out.println("first.length: " + Integer.toString(first.length));
-            System.out.println("RandomIndexes[0]: " + Integer.toString(RandomIndexes[0]));
-            // Assigning the rest randoms
-            for(int jj = 1; jj < first.length; jj++){
-                while(check){
-                    RandomIndexes[jj] = R.nextInt(first.length);
-                    int cont = 0;
-                    for(int kk = 0; k < jj; k++){
-                        if(!(RandomIndexes[jj]== RandomIndexes[kk])){
-                            cont++;
-                            System.out.println("jj: " + Integer.toString(jj));
-                            System.out.println("cont: " + Integer.toString(cont));
+            //System.out.println("first.length: " + Integer.toString(first.length));
+            if(first.length != 0){
+                // Assigning first random
+                RandomIndexes[0] = R.nextInt(first.length);
+                //System.out.println("RandomIndexes[0]: " + Integer.toString(RandomIndexes[0]));
+                // Assigning the rest randoms
+                for(int jj = 1; jj < first.length; jj++){
+                    //System.out.println("0");
+                    while(check){
+                        //System.out.println("1");
+                        RandomIndexes[jj] = R.nextInt(first.length);
+                        int cont = 0;
+                        for(int kk = 0; kk < jj; kk++){
+                            //System.out.println("2");
+                            if(!(RandomIndexes[jj]== RandomIndexes[kk])){
+                                //System.out.println("3");
+                                cont++;
+                                //System.out.println("jj: " + Integer.toString(jj));
+                                //System.out.println("cont: " + Integer.toString(cont));
+                            }
+                        }
+
+                        if(cont == jj){
+                            check = false;
+                            //System.out.println("false");
                         }
                     }
-                    if(cont == jj){
-                        check = false;
-                        System.out.println("false");
-                    }
+                    check = true;
+                    //System.out.println("RandomIndexes[jj]: " + Integer.toString(RandomIndexes[jj]));
                 }
-                check = true;
-                System.out.println("RandomIndexes[jj]: " + Integer.toString(RandomIndexes[jj]));
-            }
-            int[] firstSlot = new int[first.length];
-            for(int ss = 0; ss < first.length; ss++){
-                firstSlot[ss] = first[RandomIndexes[ss]];
-                System.out.println("firstSlot[ss]: " + Integer.toString(firstSlot[ss]));
-            }
+                firstSlot = new int[first.length];
+                for(int ss = 0; ss < first.length; ss++){
+                    firstSlot[ss] = first[RandomIndexes[ss]];
+                    //System.out.println("firstSlot[ss]: " + Integer.toString(firstSlot[ss]));
+                }
+            }else{ firstSlot = first;}
+
+
+
+
 
             for (int j = 0; j < firstSlot.length; j++) {
                 // Now you create the lightpath to use the createLightpath VT
