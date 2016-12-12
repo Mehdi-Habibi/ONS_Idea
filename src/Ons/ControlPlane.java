@@ -108,6 +108,34 @@ public class ControlPlane implements ControlPlaneForRA { // Ons.RA is Routing As
     }
 
     /**
+     * Adds a given active Ons.Flow object to a determined Physical Topology.
+     *
+     * @param id unique identifier of the Ons.Flow object
+     * @param lightpaths the Ons.Path, or list of LighPath objects
+     * @return true if operation was successful, or false if a problem occurred
+     */
+    @Override
+    public boolean MyacceptFlow(long id, LightPath[] lightpaths){
+        Flow flow;
+
+        if (id < 0 || lightpaths.length < 1) {
+            throw (new IllegalArgumentException());
+        } else {
+            if (!activeFlows.containsKey(id)) {
+                return false;
+            }
+            flow = activeFlows.get(id);
+            if (!canAddFlowToPT(flow, lightpaths)) {
+                return false;
+            }
+            if(!checkLightpathContinuity(flow, lightpaths)){
+                return false;
+            }
+            return true;
+        }
+    }
+
+    /**
      * Removes a given Ons.Flow object from the list of active flows.
      * 
      * @param id unique identifier of the Ons.Flow object

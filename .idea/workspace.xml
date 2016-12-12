@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/ControlPlane.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/ControlPlane.class" />
+    <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="Almost done!">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ons/Util/SNR.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/EONLink.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/EONLink.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/Main.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/MyStatistics.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/MyStatistics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/RA/ControlPlaneForRA.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/RA/ControlPlaneForRA.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/Simulator.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/Simulator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/ControlPlane.java" afterPath="$PROJECT_DIR$/src/Ons/ControlPlane.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/EONLink.java" afterPath="$PROJECT_DIR$/src/Ons/EONLink.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/Main.java" afterPath="$PROJECT_DIR$/src/Ons/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/MyStatistics.java" afterPath="$PROJECT_DIR$/src/Ons/MyStatistics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java" afterPath="$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/Simulator.java" afterPath="$PROJECT_DIR$/src/Ons/Simulator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/VirtualTopology.java" afterPath="$PROJECT_DIR$/src/Ons/VirtualTopology.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,58 +29,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
+      <file leaf-file-name="SNR.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Ons/Util/SNR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EONLink.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
-              <caret line="615" column="24" lean-forward="false" selection-start-line="615" selection-start-column="24" selection-end-line="615" selection-end-column="24" />
+            <state relative-caret-position="391">
+              <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
-                <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getNumSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getUsedSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#reserveSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="method#reserveSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#releaseSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="method#releaseSlots#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-                <element signature="method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#toString#0;class#EONLink#0" expanded="false" />
-                <element signature="method#toString#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#printLink#0;class#EONLink#0" expanded="false" />
-                <element signature="method#printLink#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#findLightpath#0;class#EONLink#0" expanded="false" />
-                <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
-                <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-                <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
-                <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#getLinkBW#0;class#SNR#0" expanded="false" />
+                <element signature="method#getLinkBW#0;class#SNR#0" expanded="false" />
+                <element signature="docComment;method#getLinkSNR#0;class#SNR#0" expanded="false" />
+                <element signature="docComment;method#getLightPathSNR#0;class#SNR#0" expanded="false" />
+                <element signature="method#getLightPathSNR#0;class#SNR#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,23 +49,40 @@
       <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="98" column="68" lean-forward="false" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
+            <state relative-caret-position="216">
+              <caret line="120" column="69" lean-forward="false" selection-start-line="120" selection-start-column="69" selection-end-line="120" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlPlane.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KSP.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-34">
+              <caret line="79" column="63" lean-forward="true" selection-start-line="79" selection-start-column="63" selection-end-line="79" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlPlane.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ons/ControlPlane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="143" column="41" lean-forward="false" selection-start-line="143" selection-start-column="41" selection-end-line="143" selection-end-column="41" />
+            <state relative-caret-position="253">
+              <caret line="431" column="32" lean-forward="true" selection-start-line="431" selection-start-column="32" selection-end-line="431" selection-end-column="32" />
               <folding>
+                <element signature="docComment;method#ControlPlane#0;class#ControlPlane#0" expanded="false" />
+                <element signature="method#ControlPlane#0;class#ControlPlane#0" expanded="false" />
                 <element signature="docComment;method#newEvent#0;class#ControlPlane#0" expanded="false" />
+                <element signature="method#newEvent#0;class#ControlPlane#0" expanded="false" />
                 <element signature="docComment;method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
                 <element signature="method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
+                <element signature="docComment;method#MyacceptFlow#0;class#ControlPlane#0" expanded="false" />
+                <element signature="method#MyacceptFlow#0;class#ControlPlane#0" expanded="false" />
                 <element signature="docComment;method#blockFlow#0;class#ControlPlane#0" expanded="false" />
+                <element signature="method#blockFlow#0;class#ControlPlane#0" expanded="false" />
+                <element signature="docComment;method#SNRblockFlow#0;class#ControlPlane#0" expanded="false" />
                 <element signature="method#SNRblockFlow#0;class#ControlPlane#0" expanded="false" />
                 <element signature="docComment;method#rerouteFlow#0;class#ControlPlane#0" expanded="false" />
                 <element signature="method#rerouteFlow#0;class#ControlPlane#0" expanded="false" />
@@ -136,46 +107,151 @@
                 <element signature="docComment;method#createCandidateWDMLightPath#0;class#ControlPlane#0" expanded="false" />
                 <element signature="method#createCandidateWDMLightPath#0;class#ControlPlane#0" expanded="false" />
                 <element signature="docComment;method#createCandidateEONLightPath#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#createCandidateEONLightPath#0;class#ControlPlane#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyStatistics.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
+      <file leaf-file-name="EONLightPath.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ons/EONLightPath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2499">
-              <caret line="404" column="34" lean-forward="false" selection-start-line="404" selection-start-column="34" selection-end-line="404" selection-end-column="34" />
+            <state relative-caret-position="221">
+              <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
               <folding>
-                <element signature="docComment;method#MyStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#MyStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#getMyStatisticsObject#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#getMyStatisticsObject#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#clone#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#clone#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#statisticsSetup#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#statisticsSetup#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#acceptFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#acceptFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#SNRblockFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#blockFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#blockFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#addEvent#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#addEvent#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#addEvent#1;class#MyStatistics#0" expanded="false" />
-                <element signature="method#addEvent#1;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#fancyStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#fancyStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#printStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#createLightpath#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#createLightpath#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#deallocatedLightpath#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#deallocatedLightpath#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#userTransponder#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#virtualHops#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#physicalHops#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#finish#0;class#MyStatistics#0" expanded="false" />
+                <element signature="docComment;method#getFirstSlot#0;class#EONLightPath#0" expanded="false" />
+                <element signature="docComment;method#getLastSlot#0;class#EONLightPath#0" expanded="false" />
+                <element signature="docComment;method#getSlots#0;class#EONLightPath#0" expanded="false" />
+                <element signature="docComment;method#getModulation#0;class#EONLightPath#0" expanded="false" />
+                <element signature="docComment;method#getBwAvailable#0;class#EONLightPath#0" expanded="false" />
+                <element signature="docComment;method#getBw#0;class#EONLightPath#0" expanded="false" />
+                <element signature="docComment;method#addFlowOnLightPath#0;class#EONLightPath#0" expanded="false" />
+                <element signature="method#addFlowOnLightPath#0;class#EONLightPath#0" expanded="false" />
+                <element signature="docComment;method#removeFlowOnLightPath#0;class#EONLightPath#0" expanded="false" />
+                <element signature="docComment;method#toString#0;class#EONLightPath#0" expanded="false" />
+                <element signature="method#toString#0;class#EONLightPath#0" expanded="false" />
+                <element signature="method#toTrace#0;class#EONLightPath#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VirtualTopology.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ons/VirtualTopology.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="103" column="29" lean-forward="true" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+              <folding>
+                <element signature="class#LightPathSort#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#VirtualTopology#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#VirtualTopology#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#createLightpath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#removeLightPath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#removeLightPath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#deallocatedLightpath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#deallocatedLightpath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#deallocatedLightpaths#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#deallocatedLightpaths#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#rerouteLightPath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#rerouteLightPath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#isLightpathAvailable#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#isLightpathAvailable#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getAvailableLightpaths#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getAvailableLightpaths#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpathBWAvailable#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightpathBWAvailable#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpathBWUsed#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightpathBWUsed#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#isLightpathIdle#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#isLightpathIdle#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#isLightpathFull#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightpath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpaths#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpathsInLink#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightpathsInLink#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpathsSrc#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightpathsSrc#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpathsDst#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightpathsDst#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpathsSrc#1;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightpathsSrc#1;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getAdjMatrix#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#hasLightpath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#hasLightpath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#hopCount#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightpathsGraph#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightpathsGraph#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getWeightedLightpathsGraph#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getWeightedLightpathsGraph#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getMinHops#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getMinHops#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#toString#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#toString#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#getLightPathWeight#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#getLightPathWeight#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="docComment;method#modulationPath#0;class#VirtualTopology#0" expanded="false" />
+                <element signature="method#modulationPath#0;class#VirtualTopology#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhysicalTopology.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ons/PhysicalTopology.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="218" column="9" lean-forward="true" selection-start-line="218" selection-start-column="9" selection-end-line="218" selection-end-column="9" />
+              <folding>
+                <element signature="docComment;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#PhysicalTopology#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="method#PhysicalTopology#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getNumNodes#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getNumLinks#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getNode#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getAllFreeGroomingInputPorts#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="method#getAllFreeGroomingInputPorts#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getLink#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getLink#1;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getAdjMatrix#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#hasLink#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#checkLinkPath#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getWeightedGraph#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="method#getWeightedGraph#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#printXpressInputFile#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="method#printXpressInputFile#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#toString#0;class#PhysicalTopology#0" expanded="false" />
+                <element signature="method#toString#0;class#PhysicalTopology#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EONPhysicalTopology.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Ons/EONPhysicalTopology.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="189" column="35" lean-forward="true" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
+              <folding>
+                <element signature="method#EONPhysicalTopology#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getSlotSize#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getMaxModulation#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#createPhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="method#createPhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#canCreatePhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#removePhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="method#removePhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getBWAvailable#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#addFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="method#addFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getBW#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getWeightedGraph#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="method#getWeightedGraph#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#canAddFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="method#canAddFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#removeFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="method#removeFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="docComment;method#getAvailableSlots#0;class#EONPhysicalTopology#0" expanded="false" />
+                <element signature="method#getAvailableSlots#0;class#EONPhysicalTopology#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -241,21 +317,23 @@
         <option value="$PROJECT_DIR$/src/Ons/PhysicalTopology.java" />
         <option value="$PROJECT_DIR$/src/Ons/SimulationRunner.java" />
         <option value="$PROJECT_DIR$/src/Ons/TrafficGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Ons/VirtualTopology.java" />
         <option value="$PROJECT_DIR$/src/Ons/WDMPhysicalTopology.java" />
         <option value="$PROJECT_DIR$/src/Ons/RA/MyRSA3.java" />
         <option value="$PROJECT_DIR$/src/Ons/MathFunctions.java" />
         <option value="$PROJECT_DIR$/src/Ons/Util/MathFunctions.java" />
         <option value="$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java" />
         <option value="$PROJECT_DIR$/src/Ons/Modulation.java" />
-        <option value="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" />
         <option value="$PROJECT_DIR$/src/Ons/Simulator.java" />
         <option value="$PROJECT_DIR$/src/Ons/Main.java" />
+        <option value="$PROJECT_DIR$/src/Ons/MyStatistics.java" />
+        <option value="$PROJECT_DIR$/src/Ons/SNR.java" />
+        <option value="$PROJECT_DIR$/src/Ons/EONLink.java" />
+        <option value="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" />
+        <option value="$PROJECT_DIR$/src/Ons/VirtualTopology.java" />
         <option value="$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java" />
         <option value="$PROJECT_DIR$/src/Ons/ControlPlane.java" />
-        <option value="$PROJECT_DIR$/src/Ons/MyStatistics.java" />
-        <option value="$PROJECT_DIR$/src/Ons/EONLink.java" />
         <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
+        <option value="$PROJECT_DIR$/src/Ons/Util/SNR.java" />
       </list>
     </option>
   </component>
@@ -396,6 +474,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -472,8 +552,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -907,7 +985,8 @@
       <workItem from="1481320348712" duration="3183000" />
       <workItem from="1481369948314" duration="17278000" />
       <workItem from="1481395254433" duration="14520000" />
-      <workItem from="1481418986134" duration="26000" />
+      <workItem from="1481418986134" duration="55000" />
+      <workItem from="1481466273215" duration="26178000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1480853762837</created>
@@ -993,26 +1072,34 @@
       <option name="project" value="LOCAL" />
       <updated>1481389306149</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1">
+      <created>1481419037180</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1481419037180</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108941000" />
+    <option name="totallyTimeSpent" value="135148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3643533" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1029,7 +1116,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1071,11 +1157,13 @@
     <MESSAGE value="KSPwithSNR is revised" />
     <MESSAGE value="Still trying to make it work!" />
     <MESSAGE value="Final version for SNR" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final version for SNR" />
+    <MESSAGE value="1" />
+    <MESSAGE value="Almost done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost done!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1084,51 +1172,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getNumSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getUsedSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#hasSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getFirstSlotAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSlotsAvailable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getSlotsAvailableToArray#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#areSlotsAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#reserveSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#reserveSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#releaseSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="method#releaseSlots#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#maxSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="method#minSizeAvaiable#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-            <element signature="method#hasThisLightPath#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#EONLink#0" expanded="false" />
-            <element signature="method#toString#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#printLink#0;class#EONLink#0" expanded="false" />
-            <element signature="method#printLink#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#findLightpath#0;class#EONLink#0" expanded="false" />
-            <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Util/MathFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1156,6 +1199,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#EONLink#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getNumSlots#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
@@ -1189,9 +1233,6 @@
             <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1294,13 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Flow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/FlowArrivalEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1312,23 +1346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/LightPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/EONPhysicalTopology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1649">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1344,16 +1361,6 @@
         <state relative-caret-position="-916">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/PhysicalTopology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1423,14 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/EONLightPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/RA/RA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1439,36 +1438,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/MYStatisticsMatrix.java" />
-    <entry file="file://$PROJECT_DIR$/src/Ons/Link.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="docComment;method#getID#0;class#Link#0" expanded="false" />
-            <element signature="docComment;method#getSource#0;class#Link#0" expanded="false" />
-            <element signature="docComment;method#getDestination#0;class#Link#0" expanded="false" />
-            <element signature="docComment;method#getWeight#0;class#Link#0" expanded="false" />
-            <element signature="docComment;method#getDelay#0;class#Link#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Link#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Util/MathFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/VirtualTopology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1513,16 +1487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="108" column="72" lean-forward="true" selection-start-line="108" selection-start-column="72" selection-end-line="108" selection-end-column="72" />
-          <folding>
-            <element signature="method#simulationInterface#0;class#KSPBestModulation#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Simulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3383">
@@ -1531,34 +1495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="404" column="34" lean-forward="false" selection-start-line="404" selection-start-column="34" selection-end-line="404" selection-end-column="34" />
+        <state relative-caret-position="616">
+          <caret line="172" column="59" lean-forward="false" selection-start-line="172" selection-start-column="59" selection-end-line="172" selection-end-column="59" />
           <folding>
             <element signature="docComment;method#MyStatistics#0;class#MyStatistics#0" expanded="false" />
             <element signature="method#MyStatistics#0;class#MyStatistics#0" expanded="false" />
@@ -1572,7 +1512,6 @@
             <element signature="method#acceptFlow#0;class#MyStatistics#0" expanded="false" />
             <element signature="docComment;method#SNRblockFlow#0;class#MyStatistics#0" expanded="false" />
             <element signature="docComment;method#blockFlow#0;class#MyStatistics#0" expanded="false" />
-            <element signature="method#blockFlow#0;class#MyStatistics#0" expanded="false" />
             <element signature="docComment;method#addEvent#0;class#MyStatistics#0" expanded="false" />
             <element signature="method#addEvent#0;class#MyStatistics#0" expanded="false" />
             <element signature="docComment;method#addEvent#1;class#MyStatistics#0" expanded="false" />
@@ -1592,11 +1531,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="docComment;method#getID#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getSource#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getDestination#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getWeight#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#getDelay#0;class#Link#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Link#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="615" column="24" lean-forward="false" selection-start-line="615" selection-start-column="24" selection-end-line="615" selection-end-column="24" />
+        <state relative-caret-position="-907">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="18" />
           <folding>
+            <element signature="method#EONLink#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getGuardband#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getNumSlots#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#getAvaiableSlots#0;class#EONLink#0" expanded="false" />
@@ -1630,30 +1593,101 @@
             <element signature="method#findLightpath#0;class#EONLink#0" expanded="false" />
             <element signature="docComment;method#rangeFree#0;class#EONLink#0" expanded="false" />
             <element signature="method#rangeFree#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="method#getBW#0;class#EONLink#0" expanded="false" />
-            <element signature="docComment;method#getSNR#0;class#EONLink#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="98" column="68" lean-forward="false" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
+        <state relative-caret-position="238">
+          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/LightPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding>
+            <element signature="docComment;method#LightPath#0;class#LightPath#0" expanded="false" />
+            <element signature="docComment;method#getID#0;class#LightPath#0" expanded="false" />
+            <element signature="docComment;method#getSource#0;class#LightPath#0" expanded="false" />
+            <element signature="docComment;method#getDestination#0;class#LightPath#0" expanded="false" />
+            <element signature="docComment;method#getLinks#0;class#LightPath#0" expanded="false" />
+            <element signature="docComment;method#getHops#0;class#LightPath#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#LightPath#0" expanded="false" />
+            <element signature="method#toString#0;class#LightPath#0" expanded="false" />
+            <element signature="method#toTrace#0;class#LightPath#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Flow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378">
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="docComment;method#getID#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getSource#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getDestination#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getRate#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#setRate#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getDuration#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getCOS#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Flow#0" expanded="false" />
+            <element signature="method#toString#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#toTrace#0;class#Flow#0" expanded="false" />
+            <element signature="method#toTrace#0;class#Flow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/EONLightPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+          <folding>
+            <element signature="docComment;method#getFirstSlot#0;class#EONLightPath#0" expanded="false" />
+            <element signature="docComment;method#getLastSlot#0;class#EONLightPath#0" expanded="false" />
+            <element signature="docComment;method#getSlots#0;class#EONLightPath#0" expanded="false" />
+            <element signature="docComment;method#getModulation#0;class#EONLightPath#0" expanded="false" />
+            <element signature="docComment;method#getBwAvailable#0;class#EONLightPath#0" expanded="false" />
+            <element signature="docComment;method#getBw#0;class#EONLightPath#0" expanded="false" />
+            <element signature="docComment;method#addFlowOnLightPath#0;class#EONLightPath#0" expanded="false" />
+            <element signature="method#addFlowOnLightPath#0;class#EONLightPath#0" expanded="false" />
+            <element signature="docComment;method#removeFlowOnLightPath#0;class#EONLightPath#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#EONLightPath#0" expanded="false" />
+            <element signature="method#toString#0;class#EONLightPath#0" expanded="false" />
+            <element signature="method#toTrace#0;class#EONLightPath#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/ControlPlane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="143" column="41" lean-forward="false" selection-start-line="143" selection-start-column="41" selection-end-line="143" selection-end-column="41" />
+        <state relative-caret-position="253">
+          <caret line="431" column="32" lean-forward="true" selection-start-line="431" selection-start-column="32" selection-end-line="431" selection-end-column="32" />
           <folding>
+            <element signature="docComment;method#ControlPlane#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#ControlPlane#0;class#ControlPlane#0" expanded="false" />
             <element signature="docComment;method#newEvent#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#newEvent#0;class#ControlPlane#0" expanded="false" />
             <element signature="docComment;method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
             <element signature="method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#MyacceptFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#MyacceptFlow#0;class#ControlPlane#0" expanded="false" />
             <element signature="docComment;method#blockFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="method#blockFlow#0;class#ControlPlane#0" expanded="false" />
+            <element signature="docComment;method#SNRblockFlow#0;class#ControlPlane#0" expanded="false" />
             <element signature="method#SNRblockFlow#0;class#ControlPlane#0" expanded="false" />
             <element signature="docComment;method#rerouteFlow#0;class#ControlPlane#0" expanded="false" />
             <element signature="method#rerouteFlow#0;class#ControlPlane#0" expanded="false" />
@@ -1678,7 +1712,153 @@
             <element signature="docComment;method#createCandidateWDMLightPath#0;class#ControlPlane#0" expanded="false" />
             <element signature="method#createCandidateWDMLightPath#0;class#ControlPlane#0" expanded="false" />
             <element signature="docComment;method#createCandidateEONLightPath#0;class#ControlPlane#0" expanded="false" />
-            <element signature="method#createCandidateEONLightPath#0;class#ControlPlane#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/PhysicalTopology.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="218" column="9" lean-forward="true" selection-start-line="218" selection-start-column="9" selection-end-line="218" selection-end-column="9" />
+          <folding>
+            <element signature="docComment;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#PhysicalTopology#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="method#PhysicalTopology#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getNumNodes#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getNumLinks#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getNode#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getAllFreeGroomingInputPorts#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="method#getAllFreeGroomingInputPorts#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getLink#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getLink#1;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getAdjMatrix#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#hasLink#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#checkLinkPath#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getWeightedGraph#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="method#getWeightedGraph#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#printXpressInputFile#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="method#printXpressInputFile#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#PhysicalTopology#0" expanded="false" />
+            <element signature="method#toString#0;class#PhysicalTopology#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/VirtualTopology.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="103" column="29" lean-forward="true" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
+          <folding>
+            <element signature="class#LightPathSort#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#VirtualTopology#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#VirtualTopology#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#createLightpath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#removeLightPath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#removeLightPath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#deallocatedLightpath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#deallocatedLightpath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#deallocatedLightpaths#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#deallocatedLightpaths#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#rerouteLightPath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#rerouteLightPath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#isLightpathAvailable#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#isLightpathAvailable#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getAvailableLightpaths#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getAvailableLightpaths#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpathBWAvailable#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightpathBWAvailable#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpathBWUsed#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightpathBWUsed#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#isLightpathIdle#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#isLightpathIdle#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#isLightpathFull#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightpath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpaths#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpathsInLink#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightpathsInLink#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpathsSrc#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightpathsSrc#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpathsDst#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightpathsDst#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpathsSrc#1;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightpathsSrc#1;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getAdjMatrix#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#hasLightpath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#hasLightpath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#hopCount#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightpathsGraph#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightpathsGraph#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getWeightedLightpathsGraph#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getWeightedLightpathsGraph#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getMinHops#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getMinHops#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#toString#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#getLightPathWeight#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#getLightPathWeight#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="docComment;method#modulationPath#0;class#VirtualTopology#0" expanded="false" />
+            <element signature="method#modulationPath#0;class#VirtualTopology#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/EONPhysicalTopology.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="189" column="35" lean-forward="true" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
+          <folding>
+            <element signature="method#EONPhysicalTopology#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getSlotSize#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getMaxModulation#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#createPhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="method#createPhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#canCreatePhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#removePhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="method#removePhysicalLightpath#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getBWAvailable#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#addFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="method#addFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getBW#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getWeightedGraph#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="method#getWeightedGraph#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#canAddFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="method#canAddFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#removeFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="method#removeFlow#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="docComment;method#getAvailableSlots#0;class#EONPhysicalTopology#0" expanded="false" />
+            <element signature="method#getAvailableSlots#0;class#EONPhysicalTopology#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="79" column="63" lean-forward="true" selection-start-line="79" selection-start-column="63" selection-end-line="79" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="120" column="69" lean-forward="false" selection-start-line="120" selection-start-column="69" selection-end-line="120" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Util/SNR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#getLinkBW#0;class#SNR#0" expanded="false" />
+            <element signature="method#getLinkBW#0;class#SNR#0" expanded="false" />
+            <element signature="docComment;method#getLinkSNR#0;class#SNR#0" expanded="false" />
+            <element signature="docComment;method#getLightPathSNR#0;class#SNR#0" expanded="false" />
+            <element signature="method#getLightPathSNR#0;class#SNR#0" expanded="false" />
           </folding>
         </state>
       </provider>

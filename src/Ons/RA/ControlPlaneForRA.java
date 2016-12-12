@@ -19,6 +19,8 @@ public interface ControlPlaneForRA {
 
     public boolean acceptFlow(long id, LightPath[] lightpaths);
 
+    public boolean MyacceptFlow(long id, LightPath[] lightpaths);
+
     public boolean blockFlow(long id);
 
     public boolean SNRblockFlow(long id);     //(New)

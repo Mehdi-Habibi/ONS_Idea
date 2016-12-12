@@ -34,7 +34,9 @@ public class KSPwithSNR implements RA {
 
     @Override
     public void flowArrival(Flow flow) {
-        int SNRBlock = 0;     //(New) 1 if SNR is the reason of blocking
+        long counting = 0;
+        boolean SNRblock;
+        boolean specBlock;
         int[] nodes;
         int[] links;
         long id;
@@ -71,6 +73,11 @@ public class KSPwithSNR implements RA {
                 // Try the slots available in each link
                 firstSlot = ((EONLink) cp.getPT().getLink(links[i])).getSlotsAvailableToArray(requiredSlots);
                 for (int j = 0; j < firstSlot.length; j++) {
+
+                    SNRblock = false;
+                    specBlock = false;
+
+
                     // Now you create the lightpath to use the createLightpath VT
                     EONLightPath lp = cp.createCandidateEONLightPath(flow.getSource(), flow.getDestination(), links,
                             firstSlot[j], (firstSlot[j] + requiredSlots - 1), modulation);
@@ -78,48 +85,68 @@ public class KSPwithSNR implements RA {
                     if ((id = cp.getVT().createLightpath(lp)) >= 0) {
                         // Single-hop routing (end-to-end lightpath)
                         lps[0] = cp.getVT().getLightpath(id);
-                        if (cp.acceptFlow(flow.getID(), lps)) {
-                            int[] index = new int[links.length];
-                            double SNR = 0;
-                            for(k = 0; k < links.length; k++){
-                                double[][] bandwidth = ((EONLink) cp.getPT().getLink(links[k])).getBW();
-                                for (int a = 0; a < bandwidth[(EONLink.numSlots - 1)][0]; a++){     // finding the index of lightpath in the links
-                                    if(bandwidth[a][2] == (double)firstSlot[j]){
-                                        index[k] = a;
-                                    }
-                                }
-                                double temp = ((EONLink) cp.getPT().getLink(links[k])).getSNR()[index[k]];
-                                if(k == 0){
-                                    SNR = temp;
+
+
+                        EONLink[] usedLinks = new EONLink[links.length];
+                        for (int xx = 0; xx < links.length; xx++){
+                            usedLinks[xx] = (EONLink) cp.getPT().getLink(links[i]);
+                        }
+
+                        SNR snr = new SNR(lp,usedLinks );
+                        double lightpathSNR = snr.getLightPathSNR();
+
+
+                        if(Modulation.getSNR(modulation) > lightpathSNR){
+                            SNRblock = true;
+                        }
+                        else{SNRblock = false;}
+
+
+                        //if(cp.acceptFlow(flow.getID(), lps)){
+                        //    specBlock = false;
+                        //}
+                        //else{specBlock = true;}
+
+
+                        //if(cp.acceptFlow(flow.getID(), lps) && SNRblock){
+                        //    counting = counting + 1;
+                        //}
+                        //int dash = cp.getVT().getLightpathBWUsed(id);
+                        //System.out.println("1: "+Integer.toString(cp.getVT().getLightpathBWUsed(id)));
+                        //System.out.println("rate: "+Integer.toString(flow.getRate()));
+                            if (cp.MyacceptFlow(flow.getID(), lps)) {
+                                //counting++;
+                                //int uuu2 = cp.getVT().getLightpathBWUsed(id);
+                                //System.out.println("2: "+Integer.toString(uuu2));
+                                if(Modulation.getSNR(modulation) < lightpathSNR) {
+                                cp.acceptFlow(flow.getID(), lps);
+                                    //System.out.println("2: "+Integer.toString(uuu2));
+                                return;
                                 }
                                 else{
-                                    SNR = (SNR * temp) / (SNR + temp);
+                                    //lp.removeFlowOnLightPath(flow.getRate());
+                                    cp.getVT().deallocatedLightpath(id);
                                 }
+                            } else {
+                                //lp.removeFlowOnLightPath(dash);
+                                //int uuu3 = cp.getVT().getLightpathBWUsed(id);
+                                //System.out.println("3: "+Integer.toString(uuu3));
+                                // Something wrong
+                                // Dealocates the lightpath in VT and try again
+                                cp.getVT().deallocatedLightpath(id);
                             }
-                            if(Modulation.getSNR(modulation) < SNR){
-                                return;
-                            }
-                            SNRBlock = 1;
-                            //System.out.println("SNRBlock: "+Integer.toString(SNRBlock));
-                        }
-                        else {
-                            // Something wrong
-                            // Dealocates the lightpath in VT and try again
-                            cp.getVT().deallocatedLightpath(id);
-                        }
+
                     }
                 }
             }
         }
         // Block the call
-        if(SNRBlock == 1){
-            System.out.println("SNRBlock: "+Integer.toString(SNRBlock));
-            cp.SNRblockFlow(flow.getID());
-        }
-        else{
-            System.out.println(Integer.toString(0));
+       // if(counting > 0){
+       //     cp.SNRblockFlow(flow.getID());
+       // }
+       // else{
             cp.blockFlow(flow.getID());
-        }
+       // }
     }
 
     @Override
