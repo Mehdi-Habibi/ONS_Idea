@@ -23,6 +23,7 @@ public class SNR {
     public static double e = 2.71828182845;     // Euler's number
     public static double power = 0d;     // power of channels (dB)
     public static double slotSize = 12.5 * Math.pow(10,9);
+    public static double f0 = 192 * Math.pow(10,12);
     public EONLink[] links;
     public EONLightPath lp;
 
@@ -54,8 +55,7 @@ public class SNR {
             if (slots[i] != 0 && slots[i] != -1){
                 if(i == 0 || slots[i - 1] == 0 || slots[i - 1] == -1){
                     chNum++;
-                    bandLength[chNum][1] = 192d * Math.pow(10,12)+ slotSize * (double)i;
-                    //System.out.println("initial value: "+Double.toString(bandLength[chNum][1]));
+                    bandLength[chNum][1] = f0 + slotSize * (double)i;
                     bandLength[chNum][2] = (double)i;
                 }
                 bandLength[chNum][0] = bandLength[chNum][0] + slotSize;
@@ -134,23 +134,12 @@ public class SNR {
                 }
             }
             //System.out.println("Gnli[k]: "+Double.toString(Gnli[k]));
-
-
-
         }
         for(int i = 0; i < channelNum; i++){
             SNR[i] =G[i] / (Gnli[i] + GASE[i]);
             //System.out.println("G[i]: " + Double.toString(G[i]));
             //System.out.println("(Gnli[i] + GASE[i]): " + Double.toString((Gnli[i] + GASE[i])));
-
-            /*
-            if(SNR[i]<12) {
-                System.out.println("SNR[i]: " + Double.toString(SNR[i]));
-                System.out.println("Gnli[i]: " + Double.toString(Gnli[i]));
-                System.out.println("i: " + Integer.toString(i));
-                System.out.println("Ns: " + Double.toString(Ns));
-            }
-            */
+            //System.out.println("SNR[i]: " + Double.toString(SNR[i]));
         }
         return SNR;
     }
@@ -171,6 +160,7 @@ public class SNR {
                 }
             }
             double temp = getLinkSNR(k)[index[k]];
+            //System.out.println("temp: " + Double.toString(temp));
             if (k == 0) {
                 SNR = temp;
             } else {

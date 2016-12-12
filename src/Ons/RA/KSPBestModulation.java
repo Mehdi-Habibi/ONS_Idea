@@ -34,92 +34,80 @@ public class KSPBestModulation implements RA {
 
     @Override
     public void flowArrival(Flow flow) {
-        int counting = 0;
-        int SNRBlock = 0;     //(New) 1 if SNR is the reason of blocking
+        long counting = 0;
         int[] nodes;
         int[] links;
         long id;
         LightPath[] lps = new LightPath[1];
 
         // Set k=4
-        int ksp = 4;
+        int ksp = 3;
 
         // k-Shortest Paths routing
-
         ArrayList<Integer>[] kpaths = YenKSP.kShortestPaths(graph, flow.getSource(), flow.getDestination(), ksp);
 
         for (int k = 0; k < kpaths.length; k++) {
-
             nodes = route(kpaths,k);
             // If no possible path found, block the call
             if (nodes.length == 0 || nodes == null) {
                 cp.blockFlow(flow.getID());
                 return;
             }
-
             // Create the links vector
             links = new int[nodes.length - 1];
             for (int j = 0; j < nodes.length - 1; j++) {
                 links[j] = cp.getPT().getLink(nodes[j], nodes[j + 1]).getID();
             }
-
-            // Calculates the required slots
-            int requiredSlots = Modulation.convertRateToSlot(flow.getRate(), EONPhysicalTopology.getSlotSize(), modulation);
-
-            // First-Fit spectrum assignment in BPSK Ons.Modulation
-            int[] firstSlot;
-            for (int i = 0; i < 1; i++) {
+            for(int mod = 2; mod > -1; mod--){
+                this.modulation = mod;
+                // Calculates the required slots
+                int requiredSlots = Modulation.convertRateToSlot(flow.getRate(), EONPhysicalTopology.getSlotSize(), modulation);
+                // First-Fit spectrum assignment in BPSK Ons.Modulation
+                int[] firstSlot;
                 // Try the slots available in each link
-                firstSlot = ((EONLink) cp.getPT().getLink(links[i])).getSlotsAvailableToArray(requiredSlots);
+                firstSlot = ((EONLink) cp.getPT().getLink(links[0])).getSlotsAvailableToArray(requiredSlots);
                 for (int j = 0; j < firstSlot.length; j++) {
-                    SNRBlock = 1;
                     // Now you create the lightpath to use the createLightpath VT
-                    EONLightPath lp = cp.createCandidateEONLightPath(flow.getSource(), flow.getDestination(), links,
-                            firstSlot[j], (firstSlot[j] + requiredSlots - 1), modulation);
+                    EONLightPath lp = cp.createCandidateEONLightPath(flow.getSource(), flow.getDestination(), links, firstSlot[j],
+                            (firstSlot[j] + requiredSlots - 1), modulation);
                     // Now you try to establish the new lightpath, accept the call
                     if ((id = cp.getVT().createLightpath(lp)) >= 0) {
                         // Single-hop routing (end-to-end lightpath)
                         lps[0] = cp.getVT().getLightpath(id);
+
                         EONLink[] usedLinks = new EONLink[links.length];
                         for (int xx = 0; xx < links.length; xx++){
-                            usedLinks[xx] = (EONLink) cp.getPT().getLink(links[i]);
+                            usedLinks[xx] = (EONLink) cp.getPT().getLink(links[xx]);
                         }
+
                         SNR snr = new SNR(lp,usedLinks );
                         double lightpathSNR = snr.getLightPathSNR();
-                        if (cp.acceptFlow(flow.getID(), lps)) {
+                        //System.out.println("lightpathSNR: "+Double.toString(lightpathSNR));
+
+                        if (cp.MyacceptFlow(flow.getID(), lps)) {
                             counting++;
-                            SNRBlock = 1;
-                            if(Modulation.getSNR(modulation) < lightpathSNR){
-                                SNRBlock = 0;
+                            if(Modulation.getSNR(modulation) < lightpathSNR) {
+                                cp.acceptFlow(flow.getID(), lps);
                                 return;
                             }
-                            /*
-                            else {
-                                lp.removeFlowOnLightPath((int)flow.getID());
+                            else{
                                 cp.getVT().deallocatedLightpath(id);
                             }
-                            */
-                            //System.out.println("SNRBlock: "+Integer.toString(SNRBlock));
-                        }
-                        else {
+                        } else {
                             // Something wrong
                             // Dealocates the lightpath in VT and try again
                             cp.getVT().deallocatedLightpath(id);
                         }
+
                     }
                 }
             }
         }
         // Block the call
         if(counting > 0){
-            //System.out.println("ID "+Long.toString(flow.getID()));
             cp.SNRblockFlow(flow.getID());
-            if(cp.SNRblockFlow(flow.getID()) == false){
-                //System.out.println("SNRBlock: "+Integer.toString(SNRBlock));
-            }
         }
         else{
-            //System.out.println(Integer.toString(0));
             cp.blockFlow(flow.getID());
         }
     }

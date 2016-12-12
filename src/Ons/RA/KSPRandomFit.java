@@ -7,7 +7,7 @@ package Ons.RA;
 
 import Ons.*;
 import Ons.Util.*;
-
+import java.util.Random;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * Aug 2012.
  * @author onsteam
  */
-public class KSPwithSNR implements RA {
+public class KSPRandomFit implements RA {
 
     private ControlPlaneForRA cp;
     private WeightedGraph graph;
@@ -60,14 +60,49 @@ public class KSPwithSNR implements RA {
             }
             // Calculates the required slots
             int requiredSlots = Modulation.convertRateToSlot(flow.getRate(), EONPhysicalTopology.getSlotSize(), modulation);
+
+
             // First-Fit spectrum assignment in BPSK Ons.Modulation
-            int[] firstSlot;
+            int[] first;
             // Try the slots available in each link
-            firstSlot = ((EONLink) cp.getPT().getLink(links[0])).getSlotsAvailableToArray(requiredSlots);
+            first = ((EONLink) cp.getPT().getLink(links[0])).getSlotsAvailableToArray(requiredSlots);
+            int[] RandomIndexes = new int[first.length];
+            boolean check = true;
+            Random R = new Random();
+            // Assigning first random
+            RandomIndexes[0] = R.nextInt(first.length);
+            System.out.println("first.length: " + Integer.toString(first.length));
+            System.out.println("RandomIndexes[0]: " + Integer.toString(RandomIndexes[0]));
+            // Assigning the rest randoms
+            for(int jj = 1; jj < first.length; jj++){
+                while(check){
+                    RandomIndexes[jj] = R.nextInt(first.length);
+                    int cont = 0;
+                    for(int kk = 0; k < jj; k++){
+                        if(!(RandomIndexes[jj]== RandomIndexes[kk])){
+                            cont++;
+                            System.out.println("jj: " + Integer.toString(jj));
+                            System.out.println("cont: " + Integer.toString(cont));
+                        }
+                    }
+                    if(cont == jj){
+                        check = false;
+                        System.out.println("false");
+                    }
+                }
+                check = true;
+                System.out.println("RandomIndexes[jj]: " + Integer.toString(RandomIndexes[jj]));
+            }
+            int[] firstSlot = new int[first.length];
+            for(int ss = 0; ss < first.length; ss++){
+                firstSlot[ss] = first[RandomIndexes[ss]];
+                System.out.println("firstSlot[ss]: " + Integer.toString(firstSlot[ss]));
+            }
+
             for (int j = 0; j < firstSlot.length; j++) {
                 // Now you create the lightpath to use the createLightpath VT
                 EONLightPath lp = cp.createCandidateEONLightPath(flow.getSource(), flow.getDestination(), links, firstSlot[j],
-                                                                 (firstSlot[j] + requiredSlots - 1), modulation);
+                        (firstSlot[j] + requiredSlots - 1), modulation);
                 // Now you try to establish the new lightpath, accept the call
                 if ((id = cp.getVT().createLightpath(lp)) >= 0) {
                     // Single-hop routing (end-to-end lightpath)
