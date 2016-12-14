@@ -58,6 +58,7 @@ public class MyStatistics {
     private int[][][] requiredBandwidthPairsDiff;
     private int[][][] blockedBandwidthPairsDiff;
 
+
     /**
      * A private constructor that prevents any other class from instantiating.
      */
@@ -422,10 +423,18 @@ public class MyStatistics {
             double averageSpectrumAvailable = availableSlots/times;
             double spectrumAvailableRatio = (averageSpectrumAvailable*100.0)/MAX_AvailableSlots;
             stats += spectrumAvailableRatio + ", ";
-            for(int i = 0; i < modulations.length - 1; i++){
+            for(int i = 0; i < modulations.length; i++){
                 stats += Float.toString((float) modulations[i]/(float) numLightPaths*100) + ", ";
             }
-            stats += Float.toString((float) modulations[modulations.length-1]/(float) numLightPaths*100);
+            stats += Double.toString((Main.sumAcceptedSNR + Main.sumBlockedSNR)/(double) (accepted + SNRblocked)) + ", ";
+            stats += Double.toString((Main.sumAcceptedSNR )/(double) accepted) + ", ";
+            if(SNRblocked != 0){
+                stats += Double.toString((Main.sumBlockedSNR)/(double) SNRblocked);
+            }
+            else{
+                stats += "12";
+            }
+
         }
         System.out.println(stats);
     }

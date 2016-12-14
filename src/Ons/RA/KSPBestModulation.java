@@ -41,7 +41,7 @@ public class KSPBestModulation implements RA {
         LightPath[] lps = new LightPath[1];
 
         // Set k=4
-        int ksp = 3;
+        int ksp = 1;
 
         // k-Shortest Paths routing
         ArrayList<Integer>[] kpaths = YenKSP.kShortestPaths(graph, flow.getSource(), flow.getDestination(), ksp);
@@ -58,7 +58,7 @@ public class KSPBestModulation implements RA {
             for (int j = 0; j < nodes.length - 1; j++) {
                 links[j] = cp.getPT().getLink(nodes[j], nodes[j + 1]).getID();
             }
-            for(int mod = 2; mod > -1; mod--){
+            for(int mod = 1; mod > -1; mod--){
                 this.modulation = mod;
                 // Calculates the required slots
                 int requiredSlots = Modulation.convertRateToSlot(flow.getRate(), EONPhysicalTopology.getSlotSize(), modulation);

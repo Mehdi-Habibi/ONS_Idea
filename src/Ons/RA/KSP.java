@@ -40,7 +40,7 @@ public class KSP implements RA {
         LightPath[] lps = new LightPath[1];
         
         // Set k=4
-        int ksp = 4;
+        int ksp = 3;
         
         // k-Shortest Paths routing
         
@@ -66,7 +66,7 @@ public class KSP implements RA {
             
             // First-Fit spectrum assignment in BPSK Ons.Modulation
             int[] firstSlot;
-            for (int i = 0; i < links.length; i++) {
+            for (int i = 0; i < 1; i++) {
                 // Try the slots available in each link
                 firstSlot = ((EONLink) cp.getPT().getLink(links[i])).getSlotsAvailableToArray(requiredSlots);
                 for (int j = 0; j < firstSlot.length; j++) {

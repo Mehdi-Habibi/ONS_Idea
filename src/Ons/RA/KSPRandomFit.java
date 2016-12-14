@@ -41,7 +41,7 @@ public class KSPRandomFit implements RA {
         LightPath[] lps = new LightPath[1];
 
         // Set k=4
-        int ksp = 3;
+        int ksp = 1;
 
         // k-Shortest Paths routing
         ArrayList<Integer>[] kpaths = YenKSP.kShortestPaths(graph, flow.getSource(), flow.getDestination(), ksp);

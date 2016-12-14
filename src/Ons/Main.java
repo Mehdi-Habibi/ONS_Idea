@@ -12,6 +12,8 @@ package Ons;/*
  * @author onsteam
  */
 public class Main {
+    public static double sumAcceptedSNR;
+    public static double sumBlockedSNR;
     /**
      * Instantiates a Ons.Simulator object and takes the arguments from the command line.
      * Based on the number of arguments, can detect if there are too many or too few,
@@ -65,6 +67,8 @@ public class Main {
         seed = Integer.parseInt(args[1]);
         
         for (double load = minload; load <= maxload; load += step) {
+            sumAcceptedSNR = 0d;
+            sumBlockedSNR = 0d;
             wdm = new Simulator();
             wdm.Execute(simConfigFile, trace, verbose, load, seed);
         }
