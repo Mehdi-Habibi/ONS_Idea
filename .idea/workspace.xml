@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/Main.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/MyStatistics.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/MyStatistics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/RA/KSP.class" afterPath="$PROJECT_DIR$/out/production/ONS_Idea/Ons/RA/KSP.class" />
+    <list default="true" id="9b0b5644-66f9-493b-87b2-068ff759de33" name="Default" comment="SNR printing is added.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPwithDistanceAdaptiveModulation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/Main.java" afterPath="$PROJECT_DIR$/src/Ons/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/MyStatistics.java" afterPath="$PROJECT_DIR$/src/Ons/MyStatistics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSP.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSP.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPRandomFit.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPRandomFit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" afterPath="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ons/Util/SNR.java" afterPath="$PROJECT_DIR$/src/Ons/Util/SNR.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,125 +24,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SNR.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Ons/Util/SNR.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-              <folding>
-                <element signature="docComment;class#SNR#0" expanded="false" />
-                <element signature="method#SNR#0;class#SNR#0" expanded="false" />
-                <element signature="docComment;method#getLinkBW#0;class#SNR#0" expanded="false" />
-                <element signature="method#getLinkBW#0;class#SNR#0" expanded="false" />
-                <element signature="docComment;method#getLinkSNR#0;class#SNR#0" expanded="false" />
-                <element signature="method#getLinkSNR#0;class#SNR#0" expanded="false" />
-                <element signature="docComment;method#getLightPathSNR#0;class#SNR#0" expanded="false" />
-                <element signature="method#getLightPathSNR#0;class#SNR#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="KSPwithSNR.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            <state relative-caret-position="408">
+              <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyStatistics.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
+      <file leaf-file-name="KSPRandomFit.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPRandomFit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2839">
-              <caret line="428" column="90" lean-forward="false" selection-start-line="428" selection-start-column="90" selection-end-line="428" selection-end-column="90" />
-              <folding>
-                <element signature="docComment;method#MyStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#MyStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#getMyStatisticsObject#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#getMyStatisticsObject#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#clone#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#clone#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#statisticsSetup#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#statisticsSetup#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#acceptFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#SNRblockFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#SNRblockFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#blockFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#blockFlow#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#addEvent#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#addEvent#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#addEvent#1;class#MyStatistics#0" expanded="false" />
-                <element signature="method#addEvent#1;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#fancyStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#fancyStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#printStatistics#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#createLightpath#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#createLightpath#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#deallocatedLightpath#0;class#MyStatistics#0" expanded="false" />
-                <element signature="method#deallocatedLightpath#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#userTransponder#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#virtualHops#0;class#MyStatistics#0" expanded="false" />
-                <element signature="docComment;method#finish#0;class#MyStatistics#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+            <state relative-caret-position="-336">
+              <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlPlane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ons/ControlPlane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="117" column="64" lean-forward="false" selection-start-line="117" selection-start-column="64" selection-end-line="117" selection-end-column="64" />
-              <folding>
-                <element signature="docComment;method#ControlPlane#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#ControlPlane#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#newEvent#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#newEvent#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#acceptFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#MyacceptFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#MyacceptFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#blockFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#blockFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#SNRblockFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#SNRblockFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#rerouteFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#rerouteFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#newFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#removeFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#removeFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#removeFlowFromPT#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#removeFlowFromPT#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#canAddFlowToPT#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#canAddFlowToPT#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#addFlowToPT#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#addFlowToPT#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#checkLightpathContinuity#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#checkLightpathContinuity#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#getPath#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#getMappedFlows#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#getFlow#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#getLightpathFlowCount#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#getLightpathFlowCount#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#getPT#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#getVT#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#createCandidateWDMLightPath#0;class#ControlPlane#0" expanded="false" />
-                <element signature="method#createCandidateWDMLightPath#0;class#ControlPlane#0" expanded="false" />
-                <element signature="docComment;method#createCandidateEONLightPath#0;class#ControlPlane#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -176,6 +66,7 @@
       <find>execu</find>
       <find>minNumberArrivals</find>
       <find>modulations</find>
+      <find>vvv</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -231,11 +122,12 @@
         <option value="$PROJECT_DIR$/src/Ons/ControlPlane.java" />
         <option value="$PROJECT_DIR$/src/Ons/RA/KSP.java" />
         <option value="$PROJECT_DIR$/src/Ons/RA/KSPRandomFit.java" />
-        <option value="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" />
         <option value="$PROJECT_DIR$/src/Ons/Main.java" />
-        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
         <option value="$PROJECT_DIR$/src/Ons/MyStatistics.java" />
         <option value="$PROJECT_DIR$/src/Ons/Util/SNR.java" />
+        <option value="$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java" />
+        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithDistanceAdaptiveModulation.java" />
+        <option value="$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java" />
       </list>
     </option>
   </component>
@@ -376,9 +268,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -455,6 +344,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -849,8 +741,8 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Ons.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="simulation-kspwithsnr.xml 2 150 250 100" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../XML" />
+      <option name="PROGRAM_PARAMETERS" value="simulation-ksprandomfit.xml 2 150 550 25" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../XML/NFSNet" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -895,7 +787,8 @@
       <workItem from="1481607415927" duration="5144000" />
       <workItem from="1481650470885" duration="141000" />
       <workItem from="1481650778221" duration="17706000" />
-      <workItem from="1481718753790" duration="77000" />
+      <workItem from="1481718753790" duration="3160000" />
+      <workItem from="1481726429898" duration="11995000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1480853762837</created>
@@ -1016,26 +909,34 @@
       <option name="project" value="LOCAL" />
       <updated>1481573599415</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="SNR printing is added.">
+      <created>1481718885145</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1481718885145</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184261000" />
+    <option name="totallyTimeSpent" value="199339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1052,7 +953,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1099,7 +999,8 @@
     <MESSAGE value="done" />
     <MESSAGE value="randomfit is not working" />
     <MESSAGE value="It is working now" />
-    <option name="LAST_COMMIT_MESSAGE" value="It is working now" />
+    <MESSAGE value="SNR printing is added." />
+    <option name="LAST_COMMIT_MESSAGE" value="SNR printing is added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1112,13 +1013,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Ons/EONLink.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Util/MathFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1186,20 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/MyRMLSA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/EONOXC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1323,13 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Modulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1457">
-          <caret line="261" column="0" lean-forward="false" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Link.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1351,18 +1224,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/Flow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/RA/ControlPlaneForRA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-158">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1453,43 +1318,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPRandomFit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#6762#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="60" column="27" lean-forward="false" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#4986#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="68" column="33" lean-forward="false" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Simulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="docComment;method#Execute#0;class#Simulator#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1545,14 +1377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/MyStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2839">
@@ -1589,10 +1413,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/EONOXC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#1375#1376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Flow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding>
+            <element signature="docComment;method#getID#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getSource#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getDestination#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getRate#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#setRate#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getDuration#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#getCOS#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Flow#0" expanded="false" />
+            <element signature="method#toString#0;class#Flow#0" expanded="false" />
+            <element signature="docComment;method#toTrace#0;class#Flow#0" expanded="false" />
+            <element signature="method#toTrace#0;class#Flow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPBestModulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="79" column="14" lean-forward="false" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/MyRMLSA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="76" column="120" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="76" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="64" column="115" lean-forward="false" selection-start-line="64" selection-start-column="115" selection-end-line="64" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ons/Util/SNR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state relative-caret-position="595">
+          <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#SNR#0" expanded="false" />
             <element signature="method#SNR#0;class#SNR#0" expanded="false" />
@@ -1603,6 +1481,72 @@
             <element signature="docComment;method#getLightPathSNR#0;class#SNR#0" expanded="false" />
             <element signature="method#getLightPathSNR#0;class#SNR#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/Modulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+          <folding>
+            <element signature="docComment;field#N_MOD#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_BPSKReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_QPSKReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_8QAMReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_16QAMReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_32QAMReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_64QAMReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_128QAMReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_256QAMReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_BPSKSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_QPSKSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_8QAMSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_16QAMSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_32QAMSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_64QAMSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_128QAMSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;field#_256QAMSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertRateToSlot#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertSlotToRate#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getModulationName#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getModulationName#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
+            <element signature="method#convertModulationTypeToInteger#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getModulationReach#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getModulationReach#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getBestModulation#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getBestModulation#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="docComment;method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
+            <element signature="method#getBestModulationSNR#0;class#Modulation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithDistanceAdaptiveModulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPwithSNR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ons/RA/KSPRandomFit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="75" column="36" lean-forward="true" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
